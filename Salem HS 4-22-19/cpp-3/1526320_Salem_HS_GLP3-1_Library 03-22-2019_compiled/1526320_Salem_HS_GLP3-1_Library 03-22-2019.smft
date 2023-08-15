@@ -1,0 +1,13 @@
+<Device Model="GLPAC-DIMFLV4">
+   <Network Type="Cresnet" Id="01">
+      <Device Model="GLI-DIMFLV4" DeviceId="03"/>
+      <Device Model="C2N-CBD-P" DeviceId="26"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="97" Name="do not use"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="98" Name="occ1"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="99" Name="occ2"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="9A" Name="occ3"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="9B" Name="occ4"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="9C" Name="occ5"/>
+   </Network>
+   <Network Type="Ethernet" Id="02"/>
+</Device>

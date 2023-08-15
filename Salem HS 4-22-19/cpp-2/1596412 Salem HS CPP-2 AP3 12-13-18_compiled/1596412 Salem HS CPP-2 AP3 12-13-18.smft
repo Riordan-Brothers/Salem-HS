@@ -1,0 +1,71 @@
+<Device Model="DIN-AP3">
+   <Network Type="Cresnet" Id="01">
+      <Device Model="GLS-SIM" DeviceId="92" Name="** do not use"/>
+      <Device Model="GLS-SIM" DeviceId="93" Name="Stair G Exit 761    SN ?"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="97" Name="** do not use"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="A4" Name="** do not use"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="A5" Name="Elev Lobby F058    SN 14803407"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="A6" Name="Lobby H010    SN 15852866"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="A7" Name="Gym Entry H020    SN 15852854"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="A8" Name="Trainer H023    SN 14946963"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="A9" Name="Office H025    SN 14946955"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="AA" Name="Womens Coach H029    SN 14946939"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="AB" Name="Mens Coach H028    SN 14946945"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="AC" Name="Corr H039    SN 15852912"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="AD" Name="Stair G Exit G061    SN 15852913"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="AE" Name="Band H738    SN 14946950"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="AF" Name="Office H734 A/B    SN 14946938"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="B0" Name="Chorus H736    SN 14803707"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="B1" Name="Sound Lock H732    SN 15907959"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="B2" Name="MPR H022    SN 14320619"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="B3" Name="Corr H721    SN 15852843"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="B4" Name="Midi Lab H729    SN 15852840"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="B5" Name="Canopy    SN 15734018"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="B6" Name="Concession H711    SN 14946953"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="B7" Name="Staff Entry G769    SN ?"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="B8" Name="Conf G767    SN ?"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="B9" Name="Ad Recep G765    SN ?"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="BA" Name="Athletic Dir G763    SN ?"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="BB" Name="Fitness F762    SN ?"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="BC" Name="Stair G Exit G761    SN ?"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="BD" Name="Elev Lobby F758    SN ?"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="BE" Name="Theater Office H809    SN ?"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="BF" Name="Stair H Lobby B802    SN ?"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="C0" Name="Elev Lobby F852    SN ?"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="C1" Name="Stair H Lobby B H718 _1    SN 14946943"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="C2" Name="Stair H Lobby B H718 _2    SN 15852854"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="D0" Name="Corr H021 occ01    SN 14755507 **needs programming"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="D1" Name="Corr H021 occ02    SN 14756544 **needs programming"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="D2" Name="Corr H021 occ03    SN 14756532 **needs programming"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="D3" Name="Corr H021 occ04    SN 14754988 **needs programming"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="D4" Name="Corr H039 occ01    SN 14756570"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="D5" Name="Corr H039 occ02    SN 14755862"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="D6" Name="Vest H039B occ01    SN 14756622 **needs programming"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="D7" Name="Team Entry H039A occ01    SN 14756492 **needs programming"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="D8" Name="Vest H039C occ01    SN 14755893 **needs programming"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="D9" Name="Corr H721 occ01    SN 14756448"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="DA" Name="Corr H721 occ02    SN 14756428"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="DB" Name="Corr H721 occ03    SN 14756467"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="DC" Name="Corr H721 occ04    SN 14756497"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="DD" Name="Corr H721 occ05    SN 14756615"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="DE" Name="Corr T069 occ01    SN ? **needs programming"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="DF" Name="Corr T069 occ02    SN ? **needs programming"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="E0" Name="Corr T069 occ03    SN ? **needs programming"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="E1" Name="Corr T069 occ04    SN ? **needs programming"/>
+   </Network>
+   <Network Type="Ethernet" Id="02">
+      <Device Model="TSW-750" DeviceId="03" Name="tsw01-750"/>
+      <Device Model="TSW-750" DeviceId="05" Name="H-809"/>
+      <Device Model="Core3 UI XPanel" DeviceId="10" Name="XPanel 2.0 Smart Graphics"/>
+      <Device Model="Crestron_App" DeviceId="11" Name="Crestron App"/>
+      <Device Model="GLPAC-DIMFLV8" DeviceId="20" Name="Court 1 G063 + Court 2    GL2-6"/>
+      <Device Model="GLPAC-DIMFLV8" DeviceId="21" Name="Court 3 + Court 4    GL2-6A"/>
+      <Device Model="GLPAC-DIMFLV4-PM" DeviceId="22" Name="Exterior    GL2-2"/>
+      <Device Model="GLPAC-DIMFLV4-PM" DeviceId="23" Name="Stair H Lobby H718    GL2-3"/>
+      <Device Model="GLPAC-DIMFLV4-PM" DeviceId="24" Name="Lobby West    GL2-4"/>
+      <Device Model="GLPAC-DIMFLV4-PM" DeviceId="25" Name="Exterior H West    GL2-5"/>
+      <Device Model="GLPAC-DIMFLV4-PM" DeviceId="26" Name="Stair H Lobby B H718    GL2-7"/>
+      <Device Model="GLPAC-DIMFLV4-PM" DeviceId="27" Name="Cafeteria    GL2"/>
+      <Device Model="GLPAC-DIMFLV8-PM" DeviceId="28" Name="Temp Lab 076    GL2-1"/>
+   </Network>
+</Device>

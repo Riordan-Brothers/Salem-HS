@@ -1,0 +1,171 @@
+/*
+Dealer Name: Riordan Brothers
+Programmer: Hope Roth
+Comments:
+*/
+
+
+#SYMBOL_NAME "RBI GLPP Helper SPlus v4"
+#CATEGORY "32" // Miscellaneous
+
+#DEFAULT_NONVOLATILE
+#ENABLE_STACK_CHECKING
+#ENABLE_TRACE
+
+#USER_SIMPLSHARP_LIBRARY "GLPP_Helper_v4"
+
+
+DIGITAL_INPUT _SKIP_, save;
+
+DIGITAL_INPUT  _SKIP_, newLocalMotion;
+
+ANALOG_INPUT _SKIP_, _SKIP_, updateTimeout, _SKIP_, newOccupancyAction, newVacatingAction, _SKIP_;
+
+STRING_INPUT   newRoomName[100], newZoneName[8][100];
+
+
+
+DIGITAL_OUTPUT UpdatePulse, SavedPulse;
+ANALOG_OUTPUT SaveStatus;
+
+DIGITAL_OUTPUT _SKIP_, DefeatLocalMotionLogic;
+ANALOG_OUTPUT _SKIP_, SetTimeout, UpdateTimeoutMinutes, OccupancyAction, VacatingAction;
+STRING_OUTPUT  _SKIP_, RoomName$, ZoneName[8];
+
+STRING_PARAMETER RoomID[50];
+
+#BEGIN_PARAMETER_PROPERTIES RoomID
+  	propValidUnits = unitString;
+   	propDefaultUnit = unitString;
+   // propBounds = lower_bound , upper_bound;
+   // propDefaultValue = ;  // or, propDefaultValue = "";
+   // propList = // { "value" , "label" } , { "value" , "label" } , ... ;
+   // propShortDescription = "status_bar_hint_text";
+   // #BEGIN_PROP_FULL_DESCRIPTION  line_1...  line_2...  line_n  #END_PROP_FULL_DESCRIPTION
+   // #BEGIN_PROP_NOTES line_1...  line_2...  line_n  #END_PROP_NOTES
+#END_PARAMETER_PROPERTIES
+ 
+
+XML_Helper Helper;
+INTEGER newTimeout;
+
+
+
+/* Event Handlers */
+
+EventHandler HandleDataChange(XML_Helper P, GLPPEventArgs args)
+{
+
+	INTEGER i;
+
+	DefeatLocalMotionLogic = args.glppSettings.DefeatLocalMotion;
+	SetTimeout = args.glppSettings.SetTimeout;
+	OccupancyAction = args.glppSettings.OccupancyAction;
+	VacatingAction = args.glppSettings.VacatingAction;
+	RoomName$ = args.glppSettings.RoomName;
+     
+	
+
+    FOR (i = 1 to 8){
+          
+		ZoneName[i] = args.glppSettings.ZoneNames[i-1];
+
+		} 
+
+	
+    PULSE (50, UpdatePulse);
+}
+ 
+
+
+threadsafe change newRoomName
+{
+
+   Helper.setName(newRoomName);
+
+}
+
+threadsafe change newZoneName
+{
+
+	integer i;
+	i = getlastmodifiedarrayindex();
+   
+	Helper.setZoneName(i-1, newZoneName[i]);
+
+}
+
+
+change newLocalMotion
+{
+
+ Helper.setLocalMotion(newLocalMotion);
+
+}
+
+   
+
+threadsafe change updateTimeout
+{
+	
+    Helper.setTimeout(updateTimeout);
+	updateTimeoutMinutes = updateTimeout / 600; // for the GLPP, the timeout is 1d = .1s, so divide by 600 to get minutes
+
+	
+}
+
+
+
+threadsafe change newOccupancyAction
+{
+	
+    Helper.setOccupancyAction(newOccupancyAction);
+}
+      
+
+threadsafe change newVacatingAction
+{
+	
+    Helper.setOccupancyAction(newVacatingAction);
+}
+
+
+
+
+
+
+push save
+{
+
+	integer SaveStatus;
+
+	SaveStatus = Helper.updateXML();
+
+
+
+		if (SaveStatus=1){
+
+         PULSE (50, SavedPulse);
+		}
+}
+
+
+
+
+     
+
+/*******************************************************************************************
+  Main()
+  Uncomment and place one-time startup code here
+  (This code will get called when the system starts up)
+*******************************************************************************************/
+
+Function Main()
+{
+	WaitForInitializationComplete();
+
+	RegisterEvent(Helper,OnDataChange,HandleDataChange);     
+	Helper.Initialize(RoomID);
+
+}
+

@@ -1,0 +1,111 @@
+[BEGIN]
+  ObjTp=FSgntr
+  Sgntr=ArchiveManifest
+  RelVrs=4.11.05
+  IsProgram=1
+  TopLevelProgram=1596412 Salem HS CPP-5A AP3 3-22-19.smw
+[END]
+[BEGIN]
+  ObjTp=ArchiveItem
+  File=1596412 Salem HS CPP-5A AP3 3-22-19.smw
+  Scope=1
+[END]
+[BEGIN]
+  ObjTp=ArchiveItem
+  File=1596412 Salem HS CPP-5A AP3 3-22-19.sig
+  Scope=1
+[END]
+[BEGIN]
+  ObjTp=ArchiveItem
+  File=1596412 Salem HS CPP-5A AP3 3-22-19.lpz
+  Scope=1
+[END]
+[BEGIN]
+  ObjTp=ArchiveItem
+  File=1596412 Salem HS CPP-5A AP3 3-22-19.smft
+  Scope=1
+[END]
+[BEGIN]
+  ObjTp=ArchiveItem
+  File=1596412 Salem HS CPP-5A AP3 3-22-19.lpz.hash
+  Scope=1
+[END]
+[BEGIN]
+  ObjTp=ArchiveItem
+  File=RBI GLPP Helper Initialize.ush
+  Scope=1
+[END]
+[BEGIN]
+  ObjTp=ArchiveItem
+  File=GLPP_Helper_v4.clz
+  Scope=1
+  Module=RBI GLPP Helper Initialize.ush
+[END]
+[BEGIN]
+  ObjTp=ArchiveItem
+  File=Mobile Pro Project Name Grabber v1.10.ush
+  Scope=1
+[END]
+[BEGIN]
+  ObjTp=ArchiveItem
+  File=Riordan Touchpanel Logic v1.umc
+  Scope=1
+[END]
+[BEGIN]
+  ObjTp=ArchiveItem
+  File=RBI GLPP Helper v4.umc
+  Scope=1
+[END]
+[BEGIN]
+  ObjTp=ArchiveItem
+  File=RBI GLPP Helper SPlus v4.ush
+  Scope=1
+[END]
+[BEGIN]
+  ObjTp=ArchiveItem
+  File=GLPP_Helper_v4.clz
+  Scope=1
+  Module=RBI GLPP Helper SPlus v4
+[END]
+[BEGIN]
+  ObjTp=ArchiveItem
+  File=toggle v3.1.umc
+  Scope=1
+[END]
+[BEGIN]
+  ObjTp=ArchiveItem
+  File=cycle dim v2.umc
+  Scope=1
+[END]
+[BEGIN]
+  ObjTp=ArchiveItem
+  File=CL Occupancy Sensor v2.0.0.umc
+  Scope=1
+[END]
+[BEGIN]
+  ObjTp=ArchiveItem
+  File=Occupancy Sensor v2.0.0.ush
+  Scope=1
+[END]
+[BEGIN]
+  ObjTp=ArchiveItem
+  File=RBI Motion Snap Shot v1.3.umc
+  Scope=1
+[END]
+[BEGIN]
+  ObjTp=ArchiveItem
+  File=RBI Motion Snap Shot SPlus v1.3.ush
+  Scope=1
+[END]
+[BEGIN]
+  ObjTp=ArchiveItem
+  File=RBI_Snapshot_Helper.clz
+  Scope=1
+  Module=RBI Snap Shot Helper v1.3
+[END]
+[BEGIN]
+  ObjTp=ArchiveItem
+  File=RBI Motion Snapshot v1.3 Help File.pdf
+  Scope=1
+  Module=RBI Motion Snap Shot SPlus v1.3.ush
+[END]

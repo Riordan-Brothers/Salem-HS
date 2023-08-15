@@ -1,0 +1,275 @@
+#SYMBOL_NAME "Occupancy Sensor v2.0.0"
+#DEFINE_CONSTANT	pulse_time 10
+#DEFAULT_NONVOLATILE
+#ENABLE_STACK_CHECKING
+#ENABLE_TRACE
+
+DIGITAL_INPUT	sensor_opens_on_motion,
+				enable,
+				disable,
+				sensor_input,
+				force_occupancy,
+				force_vacancy;
+ 
+ANALOG_INPUT	sensor_timeout;
+
+DIGITAL_OUTPUT	enabled,
+				disabled,
+				occupancy_trigger,
+				occupancy_feedback,
+				vacancy_trigger,
+				vacancy_feedback,
+				_SKIP_,
+				occupancy_raw,
+				vacancy_raw;
+
+INTEGER sensor_type, timer_running, in_force_vacancy, in_force_occupancy;
+LONG_INTEGER timer;
+
+PUSH enable
+{
+	disabled = 0;
+    enabled = 1;
+
+	if(!sensor_opens_on_motion)
+	{
+		if(sensor_input)
+		{
+			pulse(pulse_time, occupancy_trigger);
+			vacancy_feedback = 0;
+			vacancy_raw = 0;
+			occupancy_feedback = 1;
+			occupancy_raw = 1;
+			in_force_vacancy = 0;
+		}
+		else
+		{
+			pulse(pulse_time, vacancy_trigger);
+			occupancy_feedback = 0;
+			occupancy_raw = 0;
+			vacancy_feedback = 1;
+			vacancy_raw = 1;
+			in_force_vacancy = 0;
+		}
+	}
+	else
+	{
+		if(!sensor_input)
+		{
+			pulse(pulse_time, occupancy_trigger);
+			vacancy_feedback = 0;
+			vacancy_raw = 0;
+			occupancy_feedback = 1;
+			occupancy_raw = 1;
+			in_force_vacancy = 0;
+		}
+		else
+		{
+			pulse(pulse_time, vacancy_trigger);
+			occupancy_feedback = 0;
+			occupancy_raw = 0;
+			vacancy_feedback = 1;
+			vacancy_raw = 1;
+			in_force_vacancy = 0;
+		}
+	}			
+}
+
+PUSH disable
+{
+	enabled = 0;
+	disabled = 1;
+}
+
+PUSH sensor_input
+{
+	if(!sensor_opens_on_motion)
+	{
+		vacancy_raw = 0;
+		occupancy_raw = 1;
+		in_force_vacancy = 0;
+	}
+	else
+	{
+		occupancy_raw = 0;
+		vacancy_raw = 1;
+	}
+		
+	if(enabled)
+	{
+
+		if(!sensor_opens_on_motion)												//if sensor closes on motion, run occupancy logic
+		{
+			if(!timer_running)
+			{
+				pulse(pulse_time, occupancy_trigger);
+				vacancy_feedback = 0;
+				occupancy_feedback = 1;
+			}
+			else
+			{
+				timer_running = 0;
+			}
+		}
+		else																	//if sensor opens on motion, run vacancy logic
+		{
+			timer_running = 1;
+
+			if(in_force_vacancy)
+			{
+				timer = 1;
+				in_force_vacancy = 0;
+			}
+			else
+			{
+				timer = (sensor_timeout + 1);
+			}
+
+			do
+			{
+				timer = timer - 1;
+				delay(100);
+				if(occupancy_raw)
+					break;
+			}
+			until (timer = 0);
+		
+			if(vacancy_raw && enabled)
+			{
+				timer_running = 0;
+				pulse(pulse_time, vacancy_trigger);
+				occupancy_feedback = 0;
+				vacancy_feedback = 1;
+			}
+		}
+	}
+}		
+
+RELEASE sensor_input
+{
+	if(!sensor_opens_on_motion)
+	{
+		occupancy_raw = 0;
+		vacancy_raw = 1;
+	}
+	else
+	{
+		vacancy_raw = 0;
+		occupancy_raw = 1;
+		in_force_vacancy = 0;
+	}
+
+	if(enabled)
+	{
+	   	if(!sensor_opens_on_motion)												//if sensor closes on motion, run vacancy logic
+		{
+			if(in_force_vacancy)
+			{
+				timer = 1;
+				in_force_vacancy = 0;
+			}
+			else
+			{
+				timer = (sensor_timeout + 1);
+			}
+			
+			timer_running = 1;
+
+			do
+			{
+				timer = timer - 1;
+				delay(100);
+				if(occupancy_raw)
+					break;
+			}
+			until (timer = 0);
+			
+			if(!sensor_input)
+			{
+				timer_running = 0;
+				pulse(pulse_time, vacancy_trigger);
+				occupancy_feedback = 0;
+				vacancy_feedback = 1;
+			}
+		
+		}
+		else																	//if sensor opens on motion, run occupancy logic
+		{
+			if(!timer_running)
+			{
+				pulse(pulse_time, occupancy_trigger);
+				vacancy_feedback = 0;
+				occupancy_feedback = 1;
+			}
+			else
+			{
+				timer_running = 0;
+			}
+		}
+	}
+}
+
+PUSH force_occupancy
+{
+	vacancy_raw = 0;
+	occupancy_raw = 1;
+	in_force_vacancy = 0;
+}
+
+PUSH force_vacancy
+{
+	occupancy_raw = 0;
+	vacancy_raw = 1;
+	in_force_vacancy = 1;
+}
+
+CHANGE sensor_timeout
+{
+	timer = (sensor_timeout + 1);
+}
+
+Function Main()
+{
+   	timer_running = 0;
+	in_force_vacancy = 0;
+	in_force_occupancy = 0;
+
+	WaitForInitializationComplete();
+
+	sensor_type = sensor_opens_on_motion;
+
+	if(!sensor_opens_on_motion)													//update room state at startup
+	{
+		if(sensor_input)
+		{
+			vacancy_feedback = 0;
+			vacancy_raw = 0;
+			occupancy_feedback = 1;
+			occupancy_raw = 1;
+		}
+		else
+		{
+			occupancy_feedback = 0;
+			occupancy_raw = 0;
+			vacancy_feedback = 1;
+			vacancy_raw = 1;
+		}
+	}
+	else																							
+	{
+		if(sensor_input)
+		{
+			occupancy_feedback = 0;
+			occupancy_raw = 0;
+			vacancy_feedback = 1;
+			vacancy_raw = 1;		
+		}
+		else
+		{
+			vacancy_feedback = 0;
+			vacancy_raw = 0;
+			occupancy_feedback = 1;
+			occupancy_raw = 1;
+		}
+	}
+}

@@ -1,0 +1,36 @@
+/*
+Dealer Name: Riordan Brothers
+Programmer: Hope Roth
+Comments:
+*/
+
+
+#SYMBOL_NAME "RBI GLPP Helper Initialize Function"
+
+
+#DEFAULT_VOLATILE
+#ENABLE_STACK_CHECKING
+#ENABLE_TRACE
+
+#USER_SIMPLSHARP_LIBRARY "GLPP_Helper_v4"
+
+
+DIGITAL_INPUT initialize;
+
+
+STRING_PARAMETER filename[100];
+
+#BEGIN_PARAMETER_PROPERTIES filename
+
+	propValidUnits = unitString;
+	propDefaultValue = "\\USER\\glpp.xml";
+
+#END_PARAMETER_PROPERTIES
+
+
+push initialize{
+
+   GLPPFileOps.parseXML(filename);
+
+
+}

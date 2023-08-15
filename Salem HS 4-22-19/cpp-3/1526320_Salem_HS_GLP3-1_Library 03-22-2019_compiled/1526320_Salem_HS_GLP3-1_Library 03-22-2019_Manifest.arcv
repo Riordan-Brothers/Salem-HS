@@ -1,0 +1,27 @@
+[BEGIN]
+  ObjTp=FSgntr
+  Sgntr=ArchiveManifest
+  RelVrs=4.11.05
+  IsProgram=1
+  TopLevelProgram=1526320_Salem_HS_GLP3-1_Library 03-22-2019.smw
+[END]
+[BEGIN]
+  ObjTp=ArchiveItem
+  File=1526320_Salem_HS_GLP3-1_Library 03-22-2019.smw
+  Scope=1
+[END]
+[BEGIN]
+  ObjTp=ArchiveItem
+  File=1526320_Salem_HS_GLP3-1_Library 03-22-2019.spz
+  Scope=1
+[END]
+[BEGIN]
+  ObjTp=ArchiveItem
+  File=1526320_Salem_HS_GLP3-1_Library 03-22-2019.sig
+  Scope=1
+[END]
+[BEGIN]
+  ObjTp=ArchiveItem
+  File=1526320_Salem_HS_GLP3-1_Library 03-22-2019.smft
+  Scope=1
+[END]

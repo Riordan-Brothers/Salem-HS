@@ -1,0 +1,857 @@
+#DEFAULT_VOLATILE
+#SYMBOL_NAME "Photocell Proportional Control v1.7.0"
+#ENABLE_STACK_CHECKING
+#ENABLE_TRACE
+
+#HELP_BEGIN
+v1.7.0	-added DALI Off signal
+       
+v1.6.0 	- updated to a new version to eliminate possible backward compatibility issue.
+
+v1.5.3 	- disallow a min-dim level of 0 (this was for Green Valley Middle School where we wanted to change a number of rooms quickly)
+		- forced sending of values when enabling photocell or turning off (regardless of last sent value)	
+		- disable photocell on startup
+		- do not save to disk on enable/disable
+
+v1.5.2 - updated photocell control algorithms and added additional params to reduce traffic.
+
+v1.5.1 - updated photocell control algorithm
+
+v1.4.1 - updated parameters.
+                 
+v1.3.1 - updated DisableAndOff to send 0 ramp regardless of photocell.
+
+v1.1.3 - updated file save logic
+	   - made it so that sensitivity level will be saved even if photocell is disabled
+
+v1.1.2 - moved clamp inside of SIMPL+.
+
+#HELP_END
+
+///#DEFINE_CONSTANT DEBUG 					1
+//#DEFINE_CONSTANT DEBUG_REENTRY 				1
+
+#DEFINE_CONSTANT FULL_ON				65535
+#DEFINE_CONSTANT PATH_LENGTH			50
+//used to calculate slope.
+#DEFINE_CONSTANT PIVOT_X				0
+#DEFINE_CONSTANT PIVOT_Y				32768
+#DEFINE_CONSTANT MAX_X					32767
+
+//constants used for temp raise/lower
+#DEFINE_CONSTANT FADERATE               500 //5s
+#DEFINE_CONSTANT MAX_OFFSET             65535
+#DEFINE_CONSTANT MIN_OFFSET             -65535
+#DEFINE_CONSTANT DEF_OFFSET				0
+#DEFINE_CONSTANT DEFAULT_MINDIMLEVEL	6554 //(10%)
+#DEFINE_CONSTANT DEFAULT_DIM_MINCHANGE	1965
+
+#DEFINE_CONSTANT RECALL_RAMP_TIME		50  //0.50s
+                        
+DIGITAL_INPUT Disable;
+DIGITAL_INPUT DisableAndOff;
+DIGITAL_INPUT _skip_;
+DIGITAL_INPUT Restart_Photocell;
+DIGITAL_INPUT RestartPhotocellWithResponseTime;
+DIGITAL_INPUT _skip_;
+                        
+DIGITAL_INPUT Calibrate_Night;
+digital_input _skip_;
+digital_input _skip_;
+DIGITAL_INPUT Faster_Response;
+DIGITAL_INPUT Slower_Response;
+digital_input _skip_;
+DIGITAL_INPUT DimLevelMinChanged;
+analog_input _skip_;
+ANALOG_input SensitivityLevel;
+analog_input _skip_;
+digital_INPUT Min_Dim_Level_changed;
+digital_input TempRaise, TempLower;
+ANALOG_INPUT _skip_;
+ANALOG_INPUT Sensor_Input;
+                                     
+DIGITAL_OUTPUT Disabled;    
+DIGITAL_OUTPUT Send_Ramp_1;
+DIGITAL_OUTPUT Send_Ramp_2;
+DIGITAL_OUTPUT DALI_Off;                  
+ANALOG_OUTPUT Dim_Level_Out;
+ANALOG_OUTPUT Target_Dim_Level;
+ANALOG_OUTPUT Dim_Fade_Time;
+analog_output _skiP_;
+ANALOG_OUTPUT Nighttime_Setpoint;
+ANALOG_OUTPUT Nighttime_Dim_Out;
+ANALOG_OUTPUT _SKIP_;
+ANALOG_OUTPUT Response_Time;     
+analog_output _skip_;       
+analog_output _skip_;       
+ANALOG_OUTPUT _skip_;
+analog_output _skip_;
+ANALOG_OUTPUT SensitivityLevelOut;
+Analog_output _skip_;analog_output Min_Dim_Level_Out;
+ANALOG_OUTPUT DimOutputMinChange;
+//ANALOG_OUTPUT _SKIP_;
+//ANALOG_OUTPUT Current_Dim_Level;
+                           
+INTEGER_PARAMETER Restart_Ramp_Time;
+//INTEGER_PARAMETER Photocell_Control_Ramp_Time;
+INTEGER_PARAMETER Nighttime_Setpoint_Default;      
+//INTEGER_PARAMETER PhotocellStartDelayTime;
+INTEGER_PARAMETER OffFadeTime;
+                     
+STRING_PARAMETER FileLocation[PATH_LENGTH];
+
+INTEGER_PARAMETER ID;
+integer g_OutputValue;
+integer g_Semaphore;
+integer g_SendRampSemaphore;
+integer g_bSensorInputSemaphore;
+integer g_Initialized;
+integer g_bDisableSensor;
+integer g_iFileHandle;
+signed_long_integer g_PreviousTarget;
+signed_long_integer g_lOffset;
+
+String g_FilePath[PATH_LENGTH];
+
+STRUCTURE AutoLevel
+{
+	integer Auto_X;
+	integer Auto_Y;
+	integer Sensitivity_Level;
+	integer Nighttime_Setpoint;
+	signed_long_integer Nighttime_Dim_Level;
+	signed_long_integer MinDimLevel;
+	signed_long_integer Offset;
+	long_integer Response_Time;
+	long_integer slopeValue;
+	long_integer Yintercept;
+	integer Enabled;
+	integer DimLevelMinChange;
+};
+
+AutoLevel AutoSetpointData;
+
+#IF_NOT_DEFINED USECREATERAMP
+//same as SendRamp but does not check to see if same or similar value last sent. Probably should have SendRamp() call this function.
+function SendRampAlways(byval long_integer FadeTime, byval signed_long_integer rampValue)
+{
+	//print("\nrampValue: %ld, previous Level Out: %u, Dim Output Min Change: %d, diff: %u\n", rampValue, g_PreviousTarget,DimOutputMinChange, abs(rampValue - g_PreviousTarget));
+
+	//bounds checking
+	if(rampValue > FULL_ON)
+		rampValue = FULL_ON;
+	else if (rampValue < 0)	
+		rampValue = 0;
+
+	/*
+	//need this to prevent the PRESETV from performing a cut on a retrigger of scene
+	if (IsRamping(Dim_Level_Out))
+	  StopRamp(Dim_Level_Out);
+	*/
+	  
+	Target_Dim_Level = rampValue;
+	Dim_Fade_Time = FadeTime;
+
+	g_PreviousTarget = rampValue;
+	if (Send_Ramp_1 = 0)
+	{
+	  if(Target_Dim_Level = 0)
+	  {
+		DALI_Off = 1;
+		DALI_Off = 0;
+	  }
+	  Send_Ramp_2 = 0;
+	  Send_Ramp_1 = 1;
+	}
+	else
+	{
+	  if(Target_Dim_Level = 0)
+	  {
+		DALI_Off = 1;
+		DALI_Off = 0;
+	  }
+	  Send_Ramp_1 = 0;
+	  Send_Ramp_2 = 1;
+	}
+}
+
+
+function SendRamp(byval long_integer FadeTime, byval signed_long_integer rampValue)
+{
+    signed_long_integer lDiff;
+	//print("\nrampValue: %ld, previous Level Out: %u, Dim Output Min Change: %d, diff: %u\n", rampValue, g_PreviousTarget,DimOutputMinChange, abs(rampValue - g_PreviousTarget));
+
+	//take the absolute value (abs() function does not work with longs)
+
+	//added in order to further reduce traffic
+	if (high(Dim_Level_Out) = high(rampValue))
+		return;
+
+		if ((rampValue - g_PreviousTarget) >= 0)
+      lDiff = rampValue - g_PreviousTarget;
+	else
+	  lDiff = g_PreviousTarget - rampValue;
+ 
+	if(lDiff < DimOutputMinChange && rampValue != 0)
+		return;
+	SendRampAlways(FadeTime, rampValue);
+}
+#ENDIF
+
+#IF_DEFINED USECREATERAMP
+function SendRamp(long_integer FadeTime, byval signed_long_integer rampValue)
+{                                
+  	RAMP_INFO Rampdata;
+	//Fade the outputs to their appropriate level with the Ramp Function
+  	integer iResult;
+
+//	if(g_SendRampSemaphore)
+//		return;	
+	
+//	g_SendRampSemaphore = 1;
+	//if we are just going to the same value, don't bother send it
+	if (high(Dim_Level_Out) = high(rampValue))
+		return;
+
+	if (rampValue > 65535)
+	  rampValue=65535;
+	else if (rampValue < 0)
+	  rampValue = 0;
+	    
+	Rampdata.rampIsAbsolute=1;							//The fade time is the amount of time to reach lLevel.
+  		
+	Rampdata.rampTargetValue=rampValue;					//Set the target ramp level.
+  		
+	Rampdata.rampTransitionTime=FadeTime; 				//Set the ramp fade time.
+  	
+	//Rampdata.rampBaseValue=Current_Dim_Level;	 			//Begin ramping from the current lighting level.
+    StopRamp(Dim_Level_Out);
+	iResult = CreateRamp(Dim_Level_Out,Rampdata);       
+//	g_SendRampSemaphore = 0;
+}
+#ENDIF
+
+INTEGER_FUNCTION SaveFileNow()
+{
+	StartFileOperations();
+    g_iFileHandle = FileOpen(g_FilePath, _O_WRONLY | _O_CREAT | _O_TRUNC | _O_BINARY);
+	if(g_iFileHandle >= 0)
+		WriteStructure(g_iFileHandle, AutoSetpointData);
+	else
+           GenerateUserError("File Save Error %ld Saving file: '%s'.\n", g_iFileHandle, g_FilePath);
+
+    FileClose(g_iFileHandle);
+    
+    EndFileOperations();
+	return(1);
+}
+
+INTEGER_FUNCTION SaveFile()
+{    
+	wait(200, SaveWait)
+	{
+    
+		//while(g_Semaphore)
+		//	delay(100);
+			
+		if (g_Semaphore = 0)
+		{
+			g_Semaphore = 1;
+			SaveFileNow();
+    		g_Semaphore = 0;
+		}
+	}
+	RetimeWait(200, SaveWait);
+	return(1);
+}
+
+PUSH DimLevelMinChanged
+{
+	AutoSetpointData.DimLevelMinChange = DimOutputMinChange;
+	SaveFile();
+}
+
+FUNCTION LoadDefaultValues()
+{
+	AutoSetpointData.Auto_X = MAX_X;
+	AutoSetpointData.Auto_Y = 0;
+	AutoSetpointData.Sensitivity_Level = MAX_X;
+	autoSetpointdata.Nighttime_Setpoint = Nighttime_Setpoint_Default;
+	AutoSetpointData.Nighttime_Dim_Level = FULL_ON;
+	AutoSetpointData.Response_Time = 3000;
+	autosetpointdata.slopevalue = 100;
+	autosetpointdata.yintercept = FULL_ON;
+	Autosetpointdata.MinDimLevel = DEFAULT_MINDIMLEVEL;
+	AutoSetpointdata.Enabled = 0;
+	AutoSetpointdata.DimLevelMinChange = DEFAULT_DIM_MINCHANGE;
+	DimOutputMinChange = AutoSetpointdata.dimLevelMinChange;
+    Response_Time = Autosetpointdata.Response_Time;
+	Nighttime_Setpoint = AutoSetpointData.Nighttime_Setpoint;
+	Nighttime_Dim_Out = AutoSetpointData.Nighttime_Dim_Level;
+	SensitivityLevelOut = MAX_X;
+
+	Disabled = 1;
+	//FileClose(iFileHandle);
+	//EndFileOperations();
+	//g_Semaphore = 0;
+	//SaveFile();
+}
+
+INTEGER_Function CalculateOutput(ByVal integer SensorInput)
+{
+	//check if the level changed
+	signed_long_integer returnValue;
+	 
+	if(SensorInput <= AutoSetpointdata.Nighttime_Setpoint)
+		returnValue = AutoSetpointdata.Nighttime_Dim_Level;
+	else
+		returnValue = AutoSetpointData.Yintercept-((AutoSetpointData.slopeValue*(SensorInput-AutoSetpointdata.Nighttime_Setpoint)))/100;			
+	
+	returnValue = returnValue + g_lOffset;	
+
+	if(returnValue > FULL_ON)
+		returnValue = FULL_ON;
+	
+	if(returnValue <= Min_Dim_Level_out || returnValue <= 0)
+		returnValue = Min_Dim_Level_out;
+		
+	#IF_DEFINED DEBUG
+		print("\nCalculateOutput\n");
+		print("---------------\n");
+		print("Y-intercept: %ld\n", AutoSetpointdata.Yintercept);
+		print("Slope: %ld\n", autosetpointdata.slopevalue);
+		print("Sensor In: %u\n", sensor_input);
+		print("Nighttime Setpoint: %u\n", AutoSetpointdata.Nighttime_Setpoint);
+		print("Dim Output Level: %ld", returnValue);
+	#ENDIF
+
+	return(returnValue);
+}
+
+Function EnablePhotocell(integer bMaintainOffset, byval long_integer RampTime)
+{
+	integer outputLevel; 
+	integer bSaveFile;
+   
+	//LoadFile();
+	Nighttime_Setpoint = AutoSetpointData.Nighttime_Setpoint;
+	Nighttime_Dim_Out = AutoSetpointData.Nighttime_Dim_Level;
+	Min_Dim_Level_Out = AutoSetpointData.MinDimLevel;
+	SensitivityLevelOut = AutoSetpointData.Sensitivity_Level;
+	bSaveFile = 0;
+	
+	//SaveFile();
+	if(AutoSetpointData.Enabled = 0)
+	{
+		AutoSetpointData.Enabled = 1;
+		Disabled = 0;
+		//bSaveFile = 1;
+	}
+
+	if (bMaintainOffset = 0)
+	{
+		if(g_lOffset != DEF_OFFSET)
+		{
+		    g_lOffset = DEF_OFFSET;
+			bSaveFile = 1;    
+		}
+	}
+
+	if(bSaveFile)
+		SaveFile();
+			
+	g_bDisableSensor = 1;
+
+	CancelAllWait();
+	//if(Sensor_Input > AutoSetpointData.Nighttime_Setpoint)
+		outputLevel = CalculateOutput(Sensor_Input) + g_lOffset;
+	//else
+	//	outputLevel = AutoSetpointData.Nighttime_Dim_Level;
+	
+    #IF_DEFINED DEBUG
+        print("\nEnablePhotocell\n");
+		print("---------------\n");
+		print("Offset: %ld\n", g_lOffset);
+		print("Calculated Dim Level: %ld\n", outputLevel);
+	#ENDIF
+
+	if(outputLevel > AutoSetpointData.Nighttime_Dim_Level)
+		outputLevel = AutoSetpointData.Nighttime_Dim_Level;
+		
+	//Response_Time = 0; //during recall, reduce the filtering temporarily
+
+    #IF_DEFINED DEBUG
+		print("Output Dim Level: %ld\n", outputLevel);
+	#ENDIF
+
+	SendRampAlways(RampTime, outputLevel);
+	g_bDisableSensor = 0;
+                         
+    //WAIT(RECALL_RAMP_TIME*5)
+    //{
+    //  Response_Time = Autosetpointdata.Response_Time;
+    //}
+}
+
+INTEGER_FUNCTION LoadFile()
+{
+	FILE_INFO tempINFO;
+	signed_integer iFileHandle;
+	signed_integer iFindResult;
+	StartFileOperations();
+	iFindResult = FindFirst(g_FilePath, tempINFO);
+	FindClose();
+	if(iFindResult = 0)
+	{
+		iFileHandle = FileOpen(g_FilePath, _O_RDONLY  | _O_BINARY);
+		if(iFileHandle >= 0)
+			ReadStructure(iFileHandle, AutoSetpointData);
+        else
+        {
+            GenerateUserError("File Load Error %ld loading file: '%s'.\n", iFileHandle, g_FilePath);
+            EndFileOperations();
+            LoadDefaultValues();
+            return(0);
+        }
+		FileClose(iFileHandle);
+            
+		Nighttime_Setpoint = AutoSetpointData.Nighttime_Setpoint;
+		Nighttime_Dim_Out = AutoSetpointData.Nighttime_Dim_Level;
+		Min_Dim_Level_Out = AutoSetpointData.MinDimLevel;
+		if(AutoSetpointData.dimlevelminchange = 0)
+			AutoSetpointData.dimlevelminchange = DEFAULT_DIM_MINCHANGE;
+
+		DimOutputMinChange = AutoSetpointData.DimLevelMinChange;
+		SensitivityLevelOut = AutoSetpointData.Sensitivity_Level;
+		Response_Time = AutoSetpointdata.Response_Time;
+		g_lOffset = AutoSetpointdata.Offset;
+		
+		// v1.5.3: always set to disabled on LoadFile;
+        AutoSetpointData.Enabled = 0;
+
+		if(AutoSetpointData.Enabled)
+		{
+			Disabled = 0;
+			//EnablePhotocell(1); //maintain offset that was read from file
+			EnablePhotocell(1, RECALL_RAMP_TIME); //maintain offset that was read from file
+		}
+		else
+		{
+			Disabled = 1;
+			//FileClose(iFileHandle);
+			//EndFileOperations();
+			//g_Semaphore = 0;
+			//return(0);
+		}
+	}
+	else
+	{
+		LoadDefaultValues();
+	}
+	EndFileOperations();
+	//print("\nFinished Loading File: %s", g_FilePath);
+	return(1);
+}
+
+Function CalculateXFerConstants(/*ByVal integer Auto_X, ByVal integer Auto_Y*/)
+{
+	//if(Auto_X != 0)
+	//{
+	AutoSetpointData.slopeValue = 6553500/(65535-AutoSetpointData.Sensitivity_Level);//((PIVOT_Y-Auto_Y)*100)/(Auto_X);
+	//}		
+	AutoSetpointData.Yintercept = FULL_ON;//-(SensorMin*AutoSetpointData.slopeValue/100);
+}
+                               
+/*
+function CreatePath(string Path$)
+{
+	integer iResult;
+    string temp[PATH_LENGTH];
+    FILE_INFO fi;
+  
+    //make sure that path$ does not end with a backslash    
+    while (right(Path$,1) = "\\")
+    {
+      //remove the last character
+      Path$ = left(Path$, len(Path$)-1);
+    }
+    
+	//hard-coded check for NVRAM
+	if (find("NVRAM", path$, 1) > 0)
+	  return;
+
+    startfileoperations();
+  
+    iResult = FindFirst(Path$, fi);
+  
+    if (iResult < 0)   //file not found
+    {
+      iResult = MakeDirectory(Path$);
+      if (iResult!=0)
+        GenerateUserError("ERROR: Unable to create directory: %s\nError=%d", Path$, iResult);
+    }
+    else if (!IsDirectory(fi))
+    {
+	    GenerateUserError("ERROR: '%s' is not a valid path name\n", Path$);
+    }
+    
+    endfileoperations();
+
+}
+*/
+
+Function Initialize()
+{
+	integer outputLevel; 
+	if(AutoSetpointdata.Enabled)
+	{
+		
+		CancelAllWait();
+
+		if(Sensor_Input <= AutoSetpointdata.Nighttime_Setpoint)
+			outputLevel = AutoSetpointdata.Nighttime_Dim_Level;
+		else
+			outputLevel = calculateoutput(sensor_input);// + g_lOffset;			
+			
+		if(outputLevel > AutoSetpointdata.Nighttime_Dim_Level)
+			outputLevel = AutoSetpointdata.nighttime_Dim_Level;
+			
+		SendRamp(RECALL_RAMP_TIME, outputLevel);	
+	}
+}    
+
+change SensitivityLevel
+{
+	integer output;
+	RAMP_INFO tempRamp;
+
+	#IF_DEFINED DEBUG_REENTY
+	GenerateUserNotice("change SensitivityLevel: ENTER");
+	#ENDIF
+
+	if (SensitivityLevel = AutoSetpointData.Sensitivity_Level)
+	  return;
+
+	if(g_Initialized)
+	{
+		/*
+		if(SensitivityLevel > MAX_X)
+		{
+			AutoSetpointData.Auto_Y = SensitivityLevel - MAX_X;
+			AutoSetpointData.Auto_X = MAX_X;
+		}
+		else
+		{
+			AutoSetpointData.Auto_Y = 0;
+			AutoSetpointData.Auto_X = SensitivityLevel;
+		}
+		if(AutoSetpointData.Auto_X = 0)
+			AutoSetpointData.Auto_X = 1;		
+		*/
+	
+		AutoSetpointData.Sensitivity_Level = SensitivityLevel;
+		CalculateXFerConstants(/*AutoSetpointData.Auto_X, AutoSetpointData.Auto_Y*/);
+		SaveFile();
+	}   
+	
+	if(AutoSetpointData.enabled)
+	{
+		output = CalculateOutput(Sensor_Input);// + g_lOffset;
+		if(output > AutoSetpointData.nighttime_dim_level)
+			output = AutoSetpointData.nighttime_dim_level;
+		SendRamp(RECALL_RAMP_TIME, output);
+	}
+
+	#IF_DEFINED DEBUG_REENTY
+	GenerateUserNotice("change SensitivityLevel: EXIT");
+	#ENDIF
+}
+
+change Calibrate_Night
+{
+	#IF_DEFINED DEBUG_REENTY
+	GenerateUserNotice("change Calibrate_Night: ENTER");
+	#ENDIF
+
+	AutoSetpointData.Nighttime_Setpoint = Sensor_Input;
+	AutoSetpointData.Nighttime_Dim_Level = Dim_Level_Out;
+	Nighttime_Setpoint = AutoSetpointData.Nighttime_Setpoint;
+	Nighttime_Dim_Out = AutoSetpointData.Nighttime_Dim_Level;
+
+	CalculateXFerConstants(/*AutoSetpointData.Auto_X, AutoSetpointData.Auto_Y*/);
+	SaveFile();
+
+	#IF_DEFINED DEBUG_REENTY
+	GenerateUserNotice("change Calibrate_Night: EXIT");
+	#ENDIF
+}
+
+Release Min_Dim_Level_Changed
+{
+	integer outputLevel;
+	RAMP_INFO tempRamp;
+
+	#IF_DEFINED DEBUG_REENTY
+	GenerateUserNotice("change Min_Dim_Level_Changed: ENTER");
+	#ENDIF
+    
+    if (AutoSetpointData.MinDimLevel = Min_Dim_Level_Out)
+      return;
+	
+	AutoSetpointData.MinDimLevel = Min_Dim_Level_Out;	
+	SaveFile();
+	if(AutoSetpointData.Enabled && g_Initialized)
+	{
+		outputLevel = CalculateOutput(Sensor_Input);// + g_lOffset;
+		if(outputLevel > AutoSetpointData.Nighttime_Dim_Level)
+			outputLevel = AutoSetpointData.Nighttime_Dim_Level;
+	//	if(outputLevel < AutoSetpointData.MinDimLevel)
+	//		outputLevel = AutoSetpointData.MinDimLevel;
+		SendRamp(RECALL_RAMP_TIME, outputLevel);
+	}    
+	#IF_DEFINED DEBUG_REENTY
+	GenerateUserNotice("change Min_Dim_Level_Changed: EXIT");
+	#ENDIF
+}
+
+change Sensor_Input
+{	
+	integer outputLevel;
+	RAMP_INFO tempRamp;
+
+	#IF_DEFINED DEBUG_REENTY
+	GenerateUserNotice("change Sensor_Input: ENTER");
+	#ENDIF
+
+	if (g_bSensorInputSemaphore)
+		return;
+
+	if (g_bDisableSensor)
+	  	return;
+	
+	if(g_Initialized = 0)
+	{
+		Initialize();
+		g_Initialized = 1;
+	  	return;
+    }
+	
+	g_bSensorInputSemaphore = 1;
+	
+	if(AutoSetpointData.Enabled)
+	{
+		outputLevel = CalculateOutput(Sensor_Input);// + g_lOffset;
+		if(outputLevel > AutoSetpointData.Nighttime_Dim_Level)
+			outputLevel = AutoSetpointData.Nighttime_Dim_Level;
+		SendRamp(Response_Time, outputLevel);
+	}
+
+	g_bSensorInputSemaphore = 0;
+
+	#IF_DEFINED DEBUG_REENTY
+	GenerateUserNotice("change Sensor_Input: EXIT");
+	#ENDIF
+}
+
+push RestartPhotocellWithResponseTime
+{
+	#IF_DEFINED DEBUG_REENTY
+	GenerateUserNotice("push RestartPhotocell: ENTER");
+	#ENDIF
+
+	//CancelWait(PHOTOCELLSTARTWAIT);
+  	//iResponseTime = Response_Time;
+  	EnablePhotocell(0, Response_Time);  //reset offset
+
+	#IF_DEFINED DEBUG_REENTY
+	GenerateUserNotice("push RestartPhotocell: EXIT");
+	#ENDIF
+}
+
+push Restart_Photocell
+{ 
+	#IF_DEFINED DEBUG_REENTY
+	GenerateUserNotice("push RestartPhotocell: ENTER");
+	#ENDIF
+
+	//CancelWait(PHOTOCELLSTARTWAIT);
+  	EnablePhotocell(0, Restart_Ramp_Time);  //reset offset
+
+	#IF_DEFINED DEBUG_REENTY
+	GenerateUserNotice("push RestartPhotocell: EXIT");
+	#ENDIF
+}
+
+push Disable
+{
+	#IF_DEFINED DEBUG_REENTY
+	GenerateUserNotice("push Disable: ENTER");
+	#ENDIF
+
+	if (AutoSetpointData.Enabled = 0)
+	  return;
+	
+	AutoSetpointData.Enabled = 0;
+	Disabled = 1;
+	StopRamp(Dim_Level_Out);
+	//CancelWait(PHOTOCELLSTARTWAIT);
+	//SaveFile();
+
+	#IF_DEFINED DEBUG_REENTY
+	GenerateUserNotice("push Disable: EXIT");
+	#ENDIF
+}
+
+push DisableAndOff
+{
+	#IF_DEFINED DEBUG_REENTRY
+    GenerateUserNotice("push DisableAndOff: ENTER");
+	#ENDIF
+
+	if (AutoSetpointData.Enabled = 0)
+	{
+		SendRamp(OffFadeTime, 0);
+    }
+    else
+    {
+		AutoSetpointData.Enabled = 0;
+		Disabled = 1;
+		SendRamp(OffFadeTime, 0);
+		//SaveFile();	
+	}
+	//CancelWait(PHOTOCELLSTARTWAIT);
+
+	#IF_DEFINED DEBUG_REENTRY
+    GenerateUserNotice("push DisableAndOff: EXIT");
+	#ENDIF
+}
+
+push Slower_Response
+{
+	#IF_DEFINED DEBUG_REENTY
+	GenerateUserNotice("push Slower_Response: ENTER");
+	#ENDIF
+
+	if(Autosetpointdata.Response_Time = 200)
+	{
+		AutoSetpointdata.Response_Time = 500;
+	}
+	else if(Autosetpointdata.Response_Time = 500)
+	{
+		Autosetpointdata.Response_Time = 1000;
+	}
+	else if(Autosetpointdata.Response_Time = 1000)
+	{
+		Autosetpointdata.Response_Time = 3000;
+	}
+	else if(AutoSetpointdata.Response_Time = 3000)
+	{
+		Autosetpointdata.Response_Time = 6000;
+	}
+	else if(Autosetpointdata.Response_Time = 6000)
+	{
+		Autosetpointdata.Response_Time = 30000;
+	}
+
+    if (Response_Time = Autosetpointdata.Response_Time)
+      return;
+    
+    Response_Time = Autosetpointdata.Response_Time;  
+    SaveFile();
+
+	#IF_DEFINED DEBUG_REENTY
+	GenerateUserNotice("push Slower_Response: EXIT");
+	#ENDIF
+}
+
+push Faster_Response
+{	
+	#IF_DEFINED DEBUG_REENTY
+	GenerateUserNotice("push Faster_Response: ENTER");
+	#ENDIF
+
+	if(Autosetpointdata.Response_Time = 30000)
+	{
+		Autosetpointdata.Response_Time = 6000;
+	}
+	else if(Autosetpointdata.Response_Time = 6000)
+	{
+		Autosetpointdata.Response_Time = 3000;
+	}
+	else if(AutoSetpointdata.Response_Time = 3000)
+	{
+		Autosetpointdata.Response_Time = 1000;
+	}
+	else if(Autosetpointdata.Response_Time = 1000)
+	{
+		Autosetpointdata.Response_Time = 500;
+	}
+	else if(AutoSetpointData.Response_Time = 500)
+	{
+		Autosetpointdata.response_Time = 200;
+	}
+    
+    if (Response_Time = Autosetpointdata.Response_Time)
+      return;
+    
+    Response_Time = Autosetpointdata.Response_Time;  
+    SaveFile();
+
+	#IF_DEFINED DEBUG_REENTY
+	GenerateUserNotice("push Faster_Response: EXIT");
+	#ENDIF
+}
+
+release TempRaise, TempLower
+{
+
+	#IF_DEFINED DEBUG_REENTY
+	GenerateUserNotice("release TempRaise or TempLower: ENTER");
+	#ENDIF
+
+	g_OutputValue = calculateOutput(Sensor_Input);
+	g_lOffset = Dim_Level_Out - g_OutputValue;
+	g_bDisableSensor = 0;
+	Response_Time = AutoSetpointData.Response_Time;
+	if(g_lOffset != AutoSetpointdata.Offset)
+	{
+		SaveFile();
+	}
+
+	#IF_DEFINED DEBUG_REENTY
+	GenerateUserNotice("release TempRaise or TempLower: EXIT");
+	#ENDIF
+}
+
+push TempRaise, TempLower
+{
+	#IF_DEFINED DEBUG_REENTY
+	GenerateUserNotice("push TempRaise or TempLower: ENTER");
+	#ENDIF
+
+   g_bDisableSensor = 1; //while adjusting offset, do not adjust levels based on photosensor
+   Response_Time = 0; //during temp adjustment, remove filtering from photocell
+   CancelAllWait();
+
+	#IF_DEFINED DEBUG_REENTY
+	GenerateUserNotice("push TempRaise or TempLower: EXIT");
+	#ENDIF
+
+}
+
+
+Function Main()
+{	
+	g_bDisableSensor = 1;
+	g_bSensorInputSemaphore = 0;
+	g_PreviousTarget = 0;
+   	WaitForInitializationComplete();            
+
+	g_Initialized = 0;
+	g_FilePath = FileLocation + "Photocell_" + itoa(ID) + ".dat";
+	g_lOffset = DEF_OFFSET;
+	g_Semaphore = 0;
+	LoadFile();
+	g_bDisableSensor = 0;
+}                           
+                               

@@ -1,0 +1,88 @@
+#symbol_name "CueServer v1.05"
+#category "6" // Lighting
+#default_volatile
+#output_shift 1
+#help_begin
+	To be used with the CueServer v1.0.umc module only.  Not to be used as a stand-alone module.
+#help_end
+
+
+/**** I/O Variables ****/
+string_input	_SKIP_, to_cueserver$[5000];
+
+/**** Sockets ****/
+tcp_client  cueServer[5000];
+
+/**** Parameters ****/
+string_parameter  ip_address[15];
+
+/**** Parameter Properties ****/
+#begin_parameter_properties ip_address
+
+   propValidUnits = unitString;
+
+#end_parameter_properties
+
+/**** Global Variables ****/
+string g_sInCommand[5000];
+string g_sOutCommand[5000];
+
+/**** Functions ****/
+function DoCueServerConnect()
+{
+	integer siErr;
+	
+	siErr = socketConnectClient (cueServer, ip_address, 80, 0);		
+	if(siErr < 0) print("Connection Error: %d\n", siErr); 
+}
+
+function DoReformatCommandString()
+{
+	string sRemove[200];
+	string sPlusRemove[2];
+	string sReplace[200];
+	
+	if(find("+", g_sInCommand))
+	{
+		while(find("+", g_sInCommand))
+		{
+			sRemove = remove("+", g_sInCommand);
+			sPlusRemove = removeByLength(len(sRemove) - 1, sRemove);
+			g_sInCommand = sPlusRemove + "%2B" + g_sInCommand;
+		}
+	}
+
+	g_sOutCommand = g_sInCommand;
+	
+	call DoCueServerConnect();
+}
+
+/**** Events ****/
+change to_cueserver$
+{
+	if(find("\x0D", to_cueserver$))
+	{
+		// Get command string
+		g_sInCommand = to_cueserver$;
+		clearBuffer (to_cueserver$);
+		
+		call DoReformatCommandString();
+	}
+}
+
+socketConnect cueServer
+{
+    signed_integer siErr;
+    string sCommand[5000];
+    
+	// Reformat incoming string
+	makeString(sCommand, "GET /exe.cgi?cmd=%s HTTP/1.1\r\n\r\n", g_sOutCommand);
+	g_sOutCommand = "";
+                                                               
+    // Send command
+	siErr = socketSend(cueServer, sCommand);
+	if(siErr < 0) print("Send Error: %d\n", siErr);
+	
+	// Disconnect
+	socketDisconnectClient (cueServer); 	
+}

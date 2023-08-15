@@ -1,0 +1,64 @@
+<Device Model="DIN-AP3">
+   <Network Type="Cresnet" Id="01">
+      <Device Model="C2N-CBD-P" DeviceId="26" Name="Stair A Lobby E202    SN 14902240"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="A5" Name="S.E. Office E113    SN 15852091"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="A6" Name="S.E. Office E111    SN 15852904"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="A7" Name="S.E. Office E109    SN 15852884"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="A8" Name="Conf E107    SN 15852833"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="A9" Name="Special Ed E103    SN 15852873"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="AA" Name="Entry Vest E101    SN 15852871"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="AB" Name="Conf E105    SN 14803519"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="AC" Name="Conf E106    SN 14803520"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="AD" Name="Main Office E104A    SN 14803855"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="AE" Name="Admin Work E114    SN 15907964"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="AF" Name="Deans Office E110    SN 15852837"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="B0" Name="Main Admin E104    SN 15852838"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="B1" Name="Principal Office E108    SN 15852839"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="B2" Name="Corr B301    SN 15852844"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="B3" Name="Corr E204A    SN ?"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="B4" Name="Office E220    SN 14803723"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="B5" Name="Office E218    SN 15852857"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="B6" Name="Office E216    SN 14946947"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="B7" Name="Office E214    SN 14803292"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="B8" Name="Office E212    SN 14946944"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="B9" Name="Office E210    SN 14803696"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="BA" Name="Office E208    SN 14803584"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="BB" Name="Conf E206    SN 14946934"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="BC" Name="Guidance E204    SN 15852892"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="BD" Name="Staff Work E203    SN 14946930"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="BE" Name="Small Group E205    SN 14803513"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="BF" Name="Small Group E207    SN 14803730"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="C0" Name="Conf E209    SN 15479183"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="C1" Name="Stair A Lobby E202    SN 15734058"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="C2" Name="CPU Lab A232    SN 14803586"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="C3" Name="Corr A231    SN 15782884"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="C4" Name="Library Lab A233    SN 14803715"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="C5" Name="Corr B401    SN ?"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="C6" Name="Stair A/Lobby E102    SN ?"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="D0" Name="Stair A Lobby E102 occ01    SN 14756507"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="D1" Name="Stair A Lobby E102 occ02    SN 147565661"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="D2" Name="Stair A Lobby E102 occ03    SN 14756521"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="D3" Name="Stair A Lobby E102 occ04    SN 14755705"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="D4" Name="Stair A Lobby E102 occ05    SN 14755525"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="D5" Name=""Stair A Lobby E102" occ06    SN 14755997"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="D6" Name="Library Work E102B occ01    SN 14756097 *w/ LOL **needs programming"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="D7" Name="Library Work E102B occ02    SN 14756512 *w/ LOL **needs programming"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="D8" Name="Library Work E102B occ03    SN 14756531  **needs programming"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="D9" Name="Library Work E102B occ04    SN 1475571 *w/ LOL  **needs programming"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="DA" Name="Stair A Lobby E202 occ01    SN 14756559 "/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="DB" Name="Stair A Lobby E202 occ02    SN 14755273"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="DC" Name="Stair A Lobby E202 occ03    SN 14756504"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="DD" Name="Stair A Lobby E202 occ04    SN 14755270"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="DE" Name="Stair A Lobby E202 occ05    SN 14755271"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="DF" Name="Stair A Lobby E202 occ06    SN 14498573"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="E0" Name="Corr A231 occ01    SN ?"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="E1" Name="Corr A231 occ02    SN ?"/>
+   </Network>
+   <Network Type="Ethernet" Id="02">
+      <Device Model="TSW-750" DeviceId="03"/>
+      <Device Model="Core3 UI XPanel" DeviceId="10" Name="XPanel 2.0 Smart Graphics"/>
+      <Device Model="Crestron_App" DeviceId="11" Name="Crestron App"/>
+      <Device Model="GLPAC-DIMFLV4-PM" DeviceId="20" Name="Exterior    GLP-3-1A"/>
+      <Device Model="GLPAC-DIMFLV4-PM" DeviceId="22" Name="Main Library E211    GLP-3-1"/>
+   </Network>
+</Device>

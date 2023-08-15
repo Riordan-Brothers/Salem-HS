@@ -1,0 +1,73 @@
+<Device Model="DIN-AP3">
+   <Network Type="Cresnet" Id="01">
+      <Device Model="C2N-CBD-P" DeviceId="25" Name="do not use"/>
+      <Device Model="C2N-CBD-P" DeviceId="26" Name="Cont_Education_A160 2290 [C10]"/>
+      <Device Model="C2N-CBD-P" DeviceId="27" Name="Cont_Education_A160 2352 [C2]"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="40" Name="Gallery_A151_occ1 5522"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="41" Name="Gallery_A151_occ2 6540"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="42" Name="Gallery_A151_occ3 5222"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="43" Name="Gallery_A151_occ4 LOL 6515"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="44" Name="Gallery_A151_occ5 5643"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="45" Name="Gallery_A151_occ6 6021"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="46" Name="Gallery_A151_occ7 LOL 5702"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="47" Name="Corr_A251_occ1 6606"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="48" Name="Corr_A251_occ2 6485"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="49" Name="Corr_A251_occ3 6486"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="4A" Name="Corr_A251_occ4 6605"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="4B" Name="Corr_A251_occ5 6533"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="4C" Name="Corr_A251_occ6 3691"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="4D" Name="Corr_A251_occ7 5825"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="4E" Name="Corr_A251_occ8 6563"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="4F" Name="Corr_A251_occ9 6510"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="50" Name="Corr_A251_occ10 6000"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="51" Name="Corr_A251_occ11 6488"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="53" Name="Corr_A131_occ1 5805"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="54" Name="Corr_A131_occ2 5807"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="55" Name="Corr_A131_occ3 6461"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="56" Name="Corr_A131_occ4 6440"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="97" Name="do not use"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="A4" Name="do not use"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="A5" Name="Dean_Office_A165 Space07 3282"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="A6" Name="Reception_A163 Space09 2885"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="A7" Name="SRO_Office_A161 Space13 2866"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="A8" Name="Conf_A162 Space13 2886"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="A9" Name="Cont_Ed_A160 3795"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="AA" Name="Cont_Ed_Recep_A164 2910"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="AB" Name="Director_Office_A166 Space04 3680"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="AC" Name="Test_A164A Space04 7253"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="AD" Name="Exterior-Courtyd 2870"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="AE" Name="Pottery_A154 Space12 7277"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="AF" Name="Art_Studio_A150 3895"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="B0" Name="Art_Storage_A148 Space18ALT 3434"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="B1" Name="Graphics_A146 3809"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="B2" Name="CSMA_Office_A140 Space18ALT 3561 "/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="B3" Name="Edit_Suite_A132 Space18ALT 7228"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="B4" Name="Control_Rm_A125 7267"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="B5" Name="Office_A129 Space18ALT 7249"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="B6" Name="Corr_A131 3574"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="B7" Name="Studio_Entry_A141 7196"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="B8" Name="Stair_A145 LOL GLA-KP no occ 2830"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="B9" Name="For Exterior 7995"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="BA" Name="Office_A267 Space06 7243"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="BB" Name="Hum_Class_A265 Space20 3787"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="BC" Name="Hum_Class_A253 Space16 3786"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="BD" Name="CPU_Lab_A235 Space20 3762"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="BE" Name="Hum_Class_A237 Space20 3861"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="BF" Name="Exterior 2830"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="C0" Name="Corr_A251 7272"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="C1" Name="Hum_Class_A262 Space20 3800"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="C2" Name="Learning_A254 Space20 3853"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="C3" Name="Hum_SGC_A252 Space20 9138"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="C4" Name="Office_A266 Space06 7274"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="C5" Name="Meeting_A270 Space06 7230"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="C6" Name="Case_Mgr_A271 Space04 3293"/>
+   </Network>
+   <Network Type="Ethernet" Id="02">
+      <Device Model="TSW-750" DeviceId="03" Name="tsw01-750"/>
+      <Device Model="TSW-750" DeviceId="04" Name="RmA133"/>
+      <Device Model="Core3 UI XPanel" DeviceId="10" Name="XPanel 2.0 Smart Graphics"/>
+      <Device Model="Crestron_App" DeviceId="11" Name="Crestron App"/>
+      <Device Model="GLPAC-DIMFLV4-PM" DeviceId="20" Name="GLPAC-GLP5-5"/>
+      <Device Model="GLPAC-DIMFLV4" DeviceId="26" Name="GLPAC-GLP5-7 TV Studio"/>
+   </Network>
+</Device>

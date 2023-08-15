@@ -1,0 +1,86 @@
+/*
+Dealer Name: Riordan Brothers
+Programmer: Hope Roth
+Comments:
+*/
+
+
+#SYMBOL_NAME "RBI Snap Shot Helper v1.3"
+#CATEGORY "3" // Debugging
+#HINT "Takes a snapshot of current occ sensor data and then writes it to a file using a S# helper"
+
+
+
+#DEFAULT_VOLATILE
+#ENABLE_STACK_CHECKING
+#ENABLE_TRACE
+
+#USER_SIMPLSHARP_LIBRARY "RBI_Snapshot_Helper"
+
+/*
+#HELP_BEGIN
+   (add additional lines of help lines)
+#HELP_END
+*/
+
+  
+#DEFINE_CONSTANT num_sensors 150
+#DEFINE_CONSTANT array_size 149
+
+
+
+DIGITAL_INPUT  Update, _SKIP_, OccStatus[num_sensors];
+
+INTEGER_PARAMETER DaysToKeep, SaveMultiples;
+STRING_PARAMETER FileLocation[50]; 
+
+#BEGIN_PARAMETER_PROPERTIES DaysToKeep
+  	propValidUnits = unitDecimal;
+   	propDefaultUnit = unitDecimal;
+#END_PARAMETER_PROPERTIES
+
+#BEGIN_PARAMETER_PROPERTIES SaveMultiples		
+  	propValidUnits = unitDecimal;
+   	propDefaultUnit = unitDecimal;
+	propBounds = 0d, 1d;
+	propDefaultValue = 0d;
+
+#END_PARAMETER_PROPERTIES
+
+
+
+#BEGIN_PARAMETER_PROPERTIES FileLocation
+  	propValidUnits = unitString;
+   	propDefaultUnit = unitString;
+#END_PARAMETER_PROPERTIES
+
+Snapshot_Helper Helper;
+integer Array[array_size];
+  
+
+
+               
+PUSH Update {
+ 
+	integer i;
+	
+	FOR (i=0 to array_size){
+
+		Array[i] = OccStatus[i+1];
+
+		}
+ 
+	Helper.NightlyUpdate(Array);
+
+
+}
+
+
+Function Main()
+{
+
+Helper.InitialInit(DaysToKeep,SaveMultiples, FileLocation);
+
+
+}
+

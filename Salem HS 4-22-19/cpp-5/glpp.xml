@@ -1,0 +1,1113 @@
+<file xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <room name="dean_office_A165">
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>1</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <friendly_name>dean_office_A165</friendly_name>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room name="reception_A163">
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <friendly_name>reception_A163</friendly_name>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room name="SRO_office_A161">
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <friendly_name>SRO_office_A161</friendly_name>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room name="Conf_A162">
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <friendly_name>Conf_A162</friendly_name>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room name="cont_ed_A160">
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <friendly_name>cont_ed_A160</friendly_name>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room name="cont_ed_recep_A164">
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <friendly_name>cont_ed_recep_A164</friendly_name>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room name="Director_Office_A166">
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <friendly_name>Director_Office_A166</friendly_name>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room name="Test_A164A">
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <friendly_name>Test_A164A</friendly_name>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room name="Exterior_courtyard">
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <friendly_name>Exterior_courtyard</friendly_name>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room name="pottery_A154">
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <friendly_name>pottery_A154</friendly_name>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room name="art_studio_A150">
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <friendly_name>art_studio_A150</friendly_name>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room name="art_storage_A148">
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <friendly_name>art_storage_A148</friendly_name>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room name="graphics_A146">
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>1</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <friendly_name>graphics_A146</friendly_name>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room name="CSMA_Office_A140">
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <friendly_name>CSMA_Office_A140</friendly_name>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room name="edit_suite_A132">
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <friendly_name>edit_suite_A132</friendly_name>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room name="control_rm_a125">
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <friendly_name>control_rm_a125</friendly_name>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room name="Office_A129">
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <friendly_name>Office_A129</friendly_name>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room name="corr_A131">
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>1</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <friendly_name>corr_A131</friendly_name>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room name="studio_entry_A141">
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <friendly_name>studio_entry_A141</friendly_name>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room name="stair_A145">
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>1</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <friendly_name>stair_A145</friendly_name>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room name="Exterior">
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <friendly_name>Exterior</friendly_name>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room name="Office_A267">
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <friendly_name>Office_A267</friendly_name>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room name="hum_class_A265">
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <friendly_name>hum_class_A265</friendly_name>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room name="hum_class_A253">
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <friendly_name>hum_class_A253</friendly_name>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room name="CPU_Lab_A235">
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <friendly_name>CPU_Lab_A235</friendly_name>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room name="hum_class_A237">
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <friendly_name>hum_class_A237</friendly_name>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room name="corr_A251">
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>1</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <friendly_name>corr_A251</friendly_name>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room name="hum_class_A262">
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <friendly_name>hum_class_A262</friendly_name>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room name="Learning_A254">
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <friendly_name>Learning_A254</friendly_name>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room name="Hum_SGC_A252">
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <friendly_name>Hum_SGC_A252</friendly_name>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room name="Office_A266">
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <friendly_name>Office_A266</friendly_name>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room name="Meeting_A270">
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <friendly_name>Meeting_A270</friendly_name>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room name="Case_Mgr_A271">
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <friendly_name>Case_Mgr_A271</friendly_name>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>0</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>1</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>1</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>1</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+  <room>
+    <motion_logic>1</motion_logic>
+    <timeout>12000</timeout>
+    <occupancy_action>0</occupancy_action>
+    <vacating_action>9</vacating_action>
+    <load01>Zone 1</load01>
+    <load02>Zone 2</load02>
+    <load03>Zone 3</load03>
+    <load04>Zone 4</load04>
+    <load05>Zone 5</load05>
+    <load06>Zone 6</load06>
+    <load07>Zone 7</load07>
+    <load08>Zone 8</load08>
+  </room>
+</file>

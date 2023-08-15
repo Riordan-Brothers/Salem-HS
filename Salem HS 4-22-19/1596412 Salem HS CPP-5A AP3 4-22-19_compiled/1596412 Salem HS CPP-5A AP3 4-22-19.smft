@@ -1,0 +1,178 @@
+<Device Model="DIN-AP3">
+   <Network Type="Cresnet" Id="01">
+      <Device Model="C2N-CBD-P" DeviceId="22" Name="culinary lab C514 (1) 14904449 (C1)"/>
+      <Device Model="C2N-CBD-P" DeviceId="23" Name="culinary lab C514 (2) 14484818 (C1)"/>
+      <Device Model="C2N-CBD-P" DeviceId="24" Name="culinary lab C514 (3) 14902558 (C1)"/>
+      <Device Model="C2N-CBD-P" DeviceId="25" Name="do not use"/>
+      <Device Model="C2N-CBD-P" DeviceId="26" Name="culinary lab (4) C514 14084840 (C1)"/>
+      <Device Model="C2N-CBD-P" DeviceId="27" Name="stair C B315 SN?? (C13) **courtyard control"/>
+      <Device Model="C2N-CBD-P" DeviceId="28" Name="biology C608(1)  (C3)"/>
+      <Device Model="C2N-CBD-P" DeviceId="29" Name="biology C608(2) (C3)"/>
+      <Device Model="C2N-CBD-P" DeviceId="2A" Name="ECE lab C532  (C3)"/>
+      <Device Model="C2N-CBD-P" DeviceId="2B" Name="conference rm C531 (C2)"/>
+      <Device Model="C2N-CBD-P" DeviceId="2C" Name="not used"/>
+      <Device Model="C2N-CBD-P" DeviceId="2D" Name="not used"/>
+      <Device Model="C2N-CBD-P" DeviceId="2E" Name="business cte B345 (C4)"/>
+      <Device Model="C2N-CBD-P" DeviceId="2F" Name="not used"/>
+      <Device Model="C2N-CBD-P" DeviceId="30" Name="at risk B312 1824JBH12764 (C4)"/>
+      <Device Model="C2N-CBD-P" DeviceId="31" Name="control room C616 (1) 14903704 (C3) "/>
+      <Device Model="C2N-CBD-P" DeviceId="32" Name="control room C616 (2) 16055852 (C3)"/>
+      <Device Model="C2N-CBD-P" DeviceId="33" Name="control room C616 (3) 14084946 (C1)"/>
+      <Device Model="C2N-CBD-P" DeviceId="34" Name="media class C614 (1) 14902327 (C1)"/>
+      <Device Model="C2N-CBD-P" DeviceId="35" Name="media class C614 (2) 14902247 (C2)"/>
+      <Device Model="C2N-CBD-P" DeviceId="36" Name="media class C614 (3) 14902309 (C2)"/>
+      <Device Model="C2N-CBD-P" DeviceId="37" Name="bio tech class C602(1) 14902245 (C2)"/>
+      <Device Model="C2N-CBD-P" DeviceId="38" Name="bio tech class C602(2) 14904433 (C2)"/>
+      <Device Model="C2N-CBD-P" DeviceId="39" Name="bio tech class C602(3) 14483801 (C2)"/>
+      <Device Model="C2N-CBD-P" DeviceId="3A" Name="health science C632 (C3)"/>
+      <Device Model="C2N-CBD-P" DeviceId="3B" Name="chemistry C631 (C3)"/>
+      <Device Model="C2N-CBD-P" DeviceId="3C" Name="hum class B438 SN?? (C3)"/>
+      <Device Model="C2N-CBD-P" DeviceId="3D" Name="hum class B436 SN?? (C3) "/>
+      <Device Model="C2N-CBD-P" DeviceId="3E" Name="hum class B439 SN?? (C3) "/>
+      <Device Model="C2N-CBD-P" DeviceId="3F" Name="hum class B437 SN?? (C3)"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="40" Name="corridor C528 (1)14756523 *not controlling anything"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="41" Name="corridor C528 (2) 14756543 *not controlling anything"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="42" Name="corridor C523 (1) 14755784 "/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="43" Name="corridor  C523 (2) 14755467"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="44" Name="corridor C523 (3) 14756578"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="45" Name="corridor  C523 (4) SN??"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="46" Name="corridor  C523 (5) SN??"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="47" Name="corridor C525 (1) 14756366"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="48" Name="corridor C525 (2) 14755523"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="49" Name="corridor C525 (3) 14756536"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="4A" Name="corridor B301 (1) 14756489"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="4B" Name="corridor B301 (2) 14755797"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="4C" Name="corridor B301 (3) 14756627"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="4D" Name="corridor B301 (4) 14756517"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="4E" Name="corridor B301 (5) 14756381"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="4F" Name="corridor B301 (6) 14753448"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="50" Name="corridor B301 (7) 14756610"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="51" Name="corridor B301 (8) 14756499"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="52" Name="corridor B301 (9) 14756549"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="53" Name="corridor B301 (10) 14756527"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="54" Name="corridor B301 (11) 14755517"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="55" Name="cafe B348 14755783"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="56" Name="corridor B351 (1) 14756546"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="57" Name="corridor B351 (2) 14755295"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="58" Name="corridor B351 (3) 14756572"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="59" Name="corridor B351 (4) 14756625"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="5A" Name="corridor C651 (1) 14756557"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="5B" Name="corridor C651 (2) 14756506"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="5C" Name="corridor C651 (3) 14755528"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="5D" Name="stair D C628 14755571"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="5E" Name="corridor B615 (1) 14756279"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="5F" Name="corridor B615 (2) 14756617"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="60" Name="corridor B615 (3) 14756522"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="61" Name="corridor B615 (4) 14755791"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="62" Name="corridor C625 (1) 14755529"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="63" Name="corridor C625 (2) 14754756 **DLH"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="64" Name="corridor C625 (3) 14756537"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="65" Name="stair C B415 (1) 14755793"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="66" Name="stair C B415 (2) 14754980"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="67" Name="not used"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="68" Name="not used"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="69" Name="hum_class B438 14756580 **DLH"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="6A" Name="class B436 14756419 **DLH"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="6B" Name="class B439 14755979 **DLH"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="6C" Name="class B437 14754996 **DLH"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="6D" Name="corridor B401(1) 14756511"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="6E" Name="corridor B401(2) 14756535"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="6F" Name="corridor B401(3) 14756577"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="70" Name="corridor B431(1) 14755738"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="71" Name="corridor B431(2) 14755449"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="72" Name="corridor B431(3) 14756561"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="73" Name="corridor B431(4) 14756502"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="74" Name="corridor B431(5) 14756554"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="75" Name="corridor B451 (1) 14756528"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="76" Name="corridor B451 (2) 14756611"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="77" Name="corridor B451 (3) 14756526"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="78" Name="corridor B431(6) 14756575"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="79" Name="corridor B431(7) 14756529"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="7A" Name="corridor B431(8) 14756483"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="7B" Name="corridor B431(9) 14756604"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="7C" Name="corridor B431(10) 14756538"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="7D" Name="corridor B301 (12) SN??"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="97" Name="do not use"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="A4" Name="do not use"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="A5" Name="vestibule***drawn in"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="A6" Name="wall packs and bollards**drawn in"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="A7" Name="corridor C525"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="A8" Name="ECE lab C532"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="A9" Name="canopy**drawn in"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="AA" Name="site pole **drawn in"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="AB" Name="office C518"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="AC" Name="support C533"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="AD" Name="culinary lab C514"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="AE" Name="conf C531"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="AF" Name="stairC B315"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="B0" Name="STC liason C535"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="B1" Name="corr_B301"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="B2" Name="office/prep C543"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="B3" Name="CTE director C515"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="B4" Name="office C509"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="B5" Name="office C511A"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="B6" Name="office C513"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="B7" Name="class/lab C507"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="B8" Name="math office B316"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="B9" Name="CTE admin C511"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="BA" Name="math sgc B318"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="BB" Name="health B314"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="BC" Name="at risk B312"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="BD" Name="math 6 B324"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="BE" Name="math 4 B326"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="BF" Name="CTE marketing B346"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="C0" Name="case managers B310"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="C1" Name="math 2 B328"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="C2" Name="math 1 B336"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="C3" Name="CTE marketing B342"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="C4" Name="business sgc B339"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="C5" Name="audio booth C616A"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="C6" Name="media office C610"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="C7" Name="math 7 B323"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="C8" Name="math 5 B325"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="C9" Name="math 3  B329"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="CA" Name="business CTE B337"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="CB" Name="business CTE B341"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="CC" Name="business CTE B345"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="CD" Name="display B347"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="CE" Name="chemistry C631"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="CF" Name="health science C632"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="D1" Name="corridor C651"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="D2" Name="control room C616"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="D3" Name="media class C614"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="D4" Name="biology C608"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="D5" Name="shared prep C606"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="D6" Name="biotech class C602"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="D7" Name="cpu lab C603"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="D8" Name="case manager B435"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="D9" Name="learning B433"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="DA" Name="reception B427"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="DB" Name="dean office B429"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="DC" Name="project lab B403"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="DD" Name="classroom B402"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="DE" Name="classroom B404"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="E2" Name="hum class B438"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="E3" Name="hum class B436"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="E4" Name="hum class B439"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="E5" Name="hum class B437"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="E6" Name="classroom B444"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="E7" Name="classroom B442"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="E8" Name="classroom B432"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="E9" Name="math B424"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="EA" Name="classroom B422"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="EB" Name="classroom B406"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="EC" Name="gr9 class3 B441"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="ED" Name="gr9 class3 B428"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="EE" Name="corridor B451"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="EF" Name="exterior lights 16030184"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="F0" Name="GLPP-DIMFLVCN-PM CTEsign"/>
+   </Network>
+   <Network Type="Ethernet" Id="02">
+      <Device Model="TSW-750" DeviceId="03" Name="tsw01-750"/>
+      <Device Model="Core3 UI XPanel" DeviceId="10" Name="XPanel 2.0 Smart Graphics"/>
+      <Device Model="Crestron_App" DeviceId="11" Name="Crestron App"/>
+      <Device Model="GLPAC-DIMFLV8-PM" DeviceId="20" Name="cosmetology C503"/>
+      <Device Model="GLPAC-DIMFLV4-PM" DeviceId="21" Name="dining C502"/>
+      <Device Model="GLPAC-DIMFLV4" DeviceId="22" Name="classroom B425"/>
+   </Network>
+</Device>

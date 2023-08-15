@@ -1,0 +1,116 @@
+<Device Model="DIN-AP3">
+   <Network Type="Cresnet" Id="01">
+      <Device Model="C2N-CBD-P" DeviceId="25" Name="** do not use"/>
+      <Device Model="C2N-CBD-P" DeviceId="26" Name="CAD Lab C556 SN 14085026 [C3]"/>
+      <Device Model="C2N-CBD-P" DeviceId="27" Name="CAD Lab C556 SN 14085073 [C3]"/>
+      <Device Model="C2N-CBD-P" DeviceId="28" Name="Preschool C548 SN 149022175 (?) [C2]"/>
+      <Device Model="C2N-CBD-P" DeviceId="29" Name="Preschool C548 SN 14084884 [C2]"/>
+      <Device Model="C2N-CBD-P" DeviceId="2A" Name="Preschool C548 SN 14085017 [C2]"/>
+      <Device Model="C2N-CBD-P" DeviceId="2B" Name="Preschool C548 SN 14085006 [C2]"/>
+      <Device Model="C2N-CBD-P" DeviceId="2C" Name="Treatment F743 SN 14084831 [C2]"/>
+      <Device Model="C2N-CBD-P" DeviceId="2D" Name="Treatment F743 SN 14082044 [C2]"/>
+      <Device Model="C2N-CBD-P" DeviceId="2E" Name="Reception F741A SN 14483789 [C2]"/>
+      <Device Model="C2N-CBD-P" DeviceId="2F" Name="IT Work F753/749 SN 14903703 [C2] **needs programming"/>
+      <Device Model="C2N-CBD-P" DeviceId="30" Name="IT Work F753/749 SN 14902360  [C2] **needs programming"/>
+      <Device Model="C2N-CBD-P" DeviceId="31" Name="IT Work F753/749 SN 14902298  [C2] **needs programming"/>
+      <Device Model="C2N-CBD-P" DeviceId="32" Name="GR9 Lab 1 C668 SN 14902299 [C9]"/>
+      <Device Model="C2N-CBD-P" DeviceId="33" Name="GR9 Lab 2 C660 SN 1448118 (?) [C9]"/>
+      <Device Model="C2N-CBD-P" DeviceId="34" Name="GR9 Lab 2 C658 SN 14480504 (?) [C9]"/>
+      <Device Model="C2N-CBD-P" DeviceId="35" Name="Biology 2 C665 SN 14402297 [C9]"/>
+      <Device Model="C2N-CBD-P" DeviceId="36" Name="Biology 3 C655 SN 14084930 [C9]"/>
+      <Device Model="C2N-CBD-P" DeviceId="37" Name="Chemistry 1 C653 SN 14902264 [C9]"/>
+      <Device Model="C2N-CBD-P" DeviceId="38" Name="? SN 14085201 **needs programming"/>
+      <Device Model="C2N-CBD-P" DeviceId="39" Name="GR9 Lab 4 C652 SN 14085008 [C9]"/>
+      <Device Model="C2N-CBD-P" DeviceId="3A" Name="Health Science C638 SN 14902539 [C9]"/>
+      <Device Model="C2N-CBD-P" DeviceId="3B" Name="Health Science C638 SN 14484239 [C9]"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="97" Name="**do not use"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="98" Name="corr C551 SN 14756623 occ01"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="99" Name="corr C551 SN 14755521 occ02"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="9A" Name="corr C551 SN 14756436 occ03"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="9B" Name="corr C551 SN 1475519 occ04"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="9C" Name="corr C551 SN 14756558 occ05"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="9D" Name="corr C551 SN 14754990 occ06"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="9E" Name="corr C551 SN 14736567 occ07"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="9F" Name="corr C551 SN 1475595 occ08"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="A0" Name="Stair L C571 SN 14756545 occ01"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="A1" Name="corr C551 SN ? occ09"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="A2" Name="corr F740 SN ? occ01"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="A3" Name="corr F740 SN ? occ02"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="A4" Name="**do not use"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="A5" Name="corr F740 SN ? occ03"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="A6" Name="corr F740 SN ? occ04"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="B0" Name="CAD Lab C556 SN 14803781 *DH"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="B1" Name="Preschool C548 SN 15479136 1/2"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="B2" Name="Preschool C548 SN 15852835 2/2"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="B3" Name="Science Work C554 SN 14947244"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="B4" Name="Corridor C551 SN 15852920 1/2"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="B5" Name="Temp Unused C545 SN 14803279"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="B6" Name="Temp Stair/Exit T538 SN 15852825"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="B7" Name="Printer C556A SN ?"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="B8" Name="Corridor C551 SN ? 2/2"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="B9" Name="Exterior SN 14947265 Building C+D wallpacks"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="BA" Name="Greenhouse C564 SN ?"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="BB" Name="Auto Class D594 SN ?"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="BC" Name="Auto Office D595 SN?"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="BD" Name="Trades Entry D591 SN?"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="BE" Name="Tech Ed Classroom D587 SN?"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="BF" Name="Physics 2 C553 SN 15907982"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="C0" Name="Physics 1 C557 SN?"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="C1" Name="Tech Ed Lab C565 SN?"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="C2" Name="Nurse F746 SN?"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="C3" Name="Exam F742 SN 14945957"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="C4" Name="Reception/Treatment F741A/F743 SN?"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="C5" Name="Quiet Room F745 SN 14945931"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="C6" Name="Corridor F740 SN 15852918"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="C7" Name="Conference F747 SN 14947245"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="C8" Name="Vestibule F740A SN 14803738"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="C9" Name="IT Work F752 SN 14947202"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="CA" Name="IT Office F752 SN 14803711"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="CB" Name="IT Office F751 SN 14803345"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="CC" Name="Director Office F750 SN 14947234"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="CD" Name="Alternate Learning F841 SN?"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="CE" Name="Quiet Room F846 SN?"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="CF" Name="Life Skills F845 SN 15853829"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="D0" Name="Office F848 SN 14803574"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="D1" Name="Toilet F847A SN 14803682"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="D2" Name="Office F849 SN?"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="D3" Name="Conference F854 SN 1494736"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="D4" Name="Corridor B840 SN 15852905"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="D5" Name="Quiet Room F851 SN 1480359?"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="D6" Name="Open Area AT SN 148039?"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="D7" Name="Office F850 SN 14946965"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="D8" Name="Science Work C654 SN 14803380"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="D9" Name="Vestibule C652A SN 14459327"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="DA" Name="Prep C656 SN 1443910"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="DB" Name="GR9 Lab 3 C658 SN 14803785"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="DC" Name="GR9 Lab 1 C668 SN 15479133"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="DD" Name="Prep C664 SN 14946946"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="DE" Name="GR9 Lab 2 C660 SN 15479211"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="DF" Name="Temp Chemistry 2 T541 SN 15852852"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="E0" Name="Dept Office C662 SN 14803437"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="E1" Name="Chem Prep C649 SN 14803444"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="E2" Name="Vestibule C645 SN 14947200"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="E3" Name="Biology 2 C665 SN 14803802"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="E4" Name="Bio Prep 2 C661 SN 14947232"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="E5" Name="Biology 3 C655 SN 14803860"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="E6" Name="Chemistry 1 C653 SN 14803790"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="E7" Name="Corridor C651 SN 15852860"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="E8" Name="Corridor C651 SN 15852842"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="E9" Name="Corridor C651 SN ?"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="EA" Name="GR9 Lab 4 C652 SN 15782886"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="EB" Name="Health Science C650 SN 15782895"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="EC" Name="Health Office C640 SN 14803432"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="ED" Name="Health Science C638 SN 15479196"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="EE" Name="Display ? SN 14947210 **needs programming"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="EF" Name="roomC641"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="F0" Name="Rec Can? SN 14823433 **needs programming"/>
+   </Network>
+   <Network Type="Ethernet" Id="02">
+      <Device Model="TSW-750" DeviceId="03"/>
+      <Device Model="Core3 UI XPanel" DeviceId="10" Name="XPanel 2.0 Smart Graphics"/>
+      <Device Model="Crestron_App" DeviceId="11" Name="Crestron App"/>
+      <Device Model="GLPAC-DIMFLV4" DeviceId="20" Name="Bio Lab 01 C568"/>
+      <Device Model="GLPAC-DIMFLV4" DeviceId="21" Name="Plant/Animal C558"/>
+      <Device Model="GLPAC-DIMFLV4" DeviceId="22" Name="Pre-Engineer C550"/>
+   </Network>
+</Device>

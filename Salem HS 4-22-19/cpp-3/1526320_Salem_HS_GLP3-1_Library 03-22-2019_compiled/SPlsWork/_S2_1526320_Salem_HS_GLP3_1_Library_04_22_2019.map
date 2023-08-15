@@ -1,0 +1,311 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+ram              0x80000000         0x00500000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+                0x00000000                __DYNAMIC=0x0
+                0x00400000                PROVIDE (__stack, 0x400000)
+                0x00000000                PROVIDE (hardware_init_hook, 0x0)
+                0x00000000                PROVIDE (_hardware_init_hook, 0x0)
+                0x00000000                PROVIDE (software_init_hook, 0x0)
+                0x00000000                PROVIDE (_software_init_hook, 0x0)
+
+.text           0x80000000     0x97c0
+ *(.text)
+ .text          0x80000000     0x2fb4 S2_Photocell_Proportional_Control_v1_7.o
+                0x80002cf2                S2_Photocell_Proportional_Control_v1_7EventHandler00007
+                0x80001b50                S2_Photocell_Proportional_Control_v1_7EventHandler00004
+                0x80002be0                S2_Photocell_Proportional_Control_v1_7EventHandler00005
+                0x80002a54                S2_Photocell_Proportional_Control_v1_7SAVEWAIT
+                0x80002a4a                S2_Photocell_Proportional_Control_v1_7_AUTOLEVEL_Destructor
+                0x800013aa                S2_Photocell_Proportional_Control_v1_7EventHandler00001
+                0x800016b0                S2_Photocell_Proportional_Control_v1_7EventHandler00002
+                0x80002a40                S2_Photocell_Proportional_Control_v1_7_AUTOLEVEL_Constructor
+                0x800022cc                S2_Photocell_Proportional_Control_v1_7EventHandler0000B
+                0x80002c68                S2_Photocell_Proportional_Control_v1_7EventHandler00006
+                0x800018f4                S2_Photocell_Proportional_Control_v1_7EventHandler00003
+                0x80002032                S2_Photocell_Proportional_Control_v1_7EventHandler0000A
+                0x8000261e                S2_Photocell_Proportional_Control_v1_7_EventHandler
+                0x80002adc                S2_Photocell_Proportional_Control_v1_7EventHandler00000
+                0x80002ddc                S2_Photocell_Proportional_Control_v1_7EventHandler00008
+                0x80001d98                S2_Photocell_Proportional_Control_v1_7EventHandler00009
+                0x80002efc                S2_Photocell_Proportional_Control_v1_7EventHandler0000C
+                0x800026e6                S2_Photocell_Proportional_Control_v1_7_main
+ .text          0x80002fb4     0x5836 library.o
+                0x800071a0                RotateRightLong
+                0x800077ae                IsSystem
+                0x80007104                Seed
+                0x800049fc                Remove
+                0x80006d80                Ltoa
+                0x80006aac                Atoi
+                0x80005e14                InitRampInfoArray
+                0x8000755a                Right
+                0x8000858a                LockInputSema
+                0x8000702e                Mod
+                0x80007216                Getc
+                0x80006f62                SMuldiv
+                0x80007790                IsHidden
+                0x80006e46                Min
+                0x8000839e                hextosi
+                0x80007934                WriteIntegerArray
+                0x80007eaa                GetSignedIntArrayElementPtr
+                0x800067ce                CheckStructArray
+                0x800083b2                hextosl
+                0x80007aba                WriteSignedIntegerArray
+                0x80006496                InitStringParamArray
+                0x80005768                ReadSignedLongIntegerArray
+                0x8000468a                GatherToDelimiter
+                0x800062ba                InitStringArray
+                0x80006e20                Max
+                0x800077ea                IsReadOnly
+                0x80006f2a                SMax
+                0x8000482e                GatherByLength
+                0x80006cba                Chr
+                0x8000790c                ReadSignedLongInteger
+                0x80006d38                Itohex
+                0x80006740                GetStructArrayElement
+                0x80006a34                UNS_SetByte
+                0x8000752e                ReverseFindi
+                0x80005c10                ReadStringArray
+                0x80007cba                GetIntArrayElementPtr
+                0x8000736a                Lower
+                0x80007120                RotateLeft
+                0x800084d2                ResizeIfAutogrow
+                0x80005f40                CheckInputArray
+                0x80003522                ResizeStringArray
+                0x80006c4c                Atosl
+                0x80006a74                High
+                0x800070d0                Rnd
+                0x80006ff2                UMod
+                0x80007176                RotateLeftLong
+                0x800085fe                FindNumericChar
+                0x80008102                CheckIOArrayBounds2
+                0x80007748                MakeProgramFilename
+                0x80006f46                SMin
+                0x8000729e                Left
+                0x800071e0                CheckBufferThreshold
+                0x800078c4                ReadSignedInteger
+                0x80006a9e                LowWord
+                0x80002fb4                Bit
+                0x80007874                ReadLongInteger
+                0x800068b2                Byte
+                0x80007db2                GetLongArrayElementPtr
+                0x80007500                ReverseFind
+                0x8000775e                GetSeries
+                0x800086ca                InitTcpServer
+                0x80007352                Len
+                0x800081d2                InitializeRampInfoInternal
+                0x80006e6c                Divide
+                0x80006bb8                Atol
+                0x80007754                GetModelNumber
+                0x8000809a                CheckIOArrayBounds
+                0x80005f9a                CheckStringInputArray
+                0x80007b7c                WriteSignedLongIntegerArray
+                0x8000668a                GetStringArrayElement
+                0x80006dc4                Ltohex
+                0x80006cf0                Itoa
+                0x8000714a                RotateRight
+                0x80004cea                InternalReverseFind
+                0x80007854                WriteLongInteger
+                0x800061be                InitDynamicStringStruct
+                0x800060b0                SetStringArray
+                0x80005546                ReadSignedIntegerArray
+                0x80005ff4                SetOutputArray
+                0x80007804                WriteInteger
+                0x8000661e                InitStructDynamicArray
+                0x80004f74                SetString
+                0x8000706a                Random
+                0x8000789c                WriteSignedInteger
+                0x80003218                Find
+                0x80007768                GetProgramNumber
+                0x8000743e                Mid
+                0x8000863c                InitTcpClient
+                0x80004106                ResizeStructArray
+                0x80007fa2                GetSignedLongArrayElementPtr
+                0x800083c4                hextol
+                0x8000598a                ReadString
+                0x80006350                InitDynamicStringArray
+                0x800084aa                UpperChar
+                0x80006b48                Atosi
+                0x8000782c                ReadInteger
+                0x80006ede                Muldiv
+                0x80006062                SetStringOutputArray
+                0x80007c40                WriteString
+                0x80003b7a                ResizeIntegerArray
+                0x80005f08                InitInOutArray
+                0x8000655e                InitNvramStringArray
+                0x80006e08                Abs
+                0x80006fae                SDivide
+                0x80005104                ReadIntegerArray
+                0x800030c4                CompareStrings
+                0x80008482                LowerChar
+                0x8000875a                InitUdpSocket
+                0x800071c8                ClearBuffer
+                0x80007616                Upper
+                0x800065fa                InitStructArray
+                0x800076ec                MakeLower
+                0x800077cc                IsVolume
+                0x80004b56                RemoveByLength
+                0x8000684a                CheckStringOutputArrayIndex
+                0x800079f6                WriteLongIntegerArray
+                0x8000827e                InitRampInfoStructArray
+                0x80006a90                HighWord
+                0x8000338c                ResizeString
+                0x80007772                IsDirectory
+                0x80005324                ReadLongIntegerArray
+                0x80006a82                Low
+                0x80004530                Gather
+                0x8000771a                MakeUpper
+                0x80006180                InitStringStruct
+                0x8000816a                CheckStringArrayBounds
+                0x80006eb0                CheckDenominator
+                0x80008386                hextoi
+                0x80005aa8                WriteStringArray
+                0x80006972                SetByte
+                0x80008228                InitializeRampInfo
+                0x800085c4                UnLockInputSema
+                0x800078ec                WriteSignedLongInteger
+                0x80006272                InitNvramStringStruct
+ *fill*         0x800087ea        0x6
+                0x800087f0                .=ALIGN(0x10)
+ *(.eh_frame)
+                0x800087f0                .=ALIGN(0x10)
+ *(.gnu.linkonce.t.*)
+                0x800087f0                .=ALIGN(0x4)
+                0x800087f0                __CTOR_LIST__=.
+                0x800087f0                ___CTOR_LIST__=.
+                0x800087f0        0x4 LONG 0x0 (((__CTOR_END__-__CTOR_LIST__)/0x4)-0x2)
+ *(.ctors)
+                0x800087f4        0x4 LONG 0x0
+                0x800087f8                __CTOR_END__=.
+                0x800087f8                __DTOR_LIST__=.
+                0x800087f8                ___DTOR_LIST__=.
+                0x800087f8        0x4 LONG 0x0 (((__DTOR_END__-__DTOR_LIST__)/0x4)-0x2)
+ *(.dtors)
+                0x800087fc        0x4 LONG 0x0
+                0x80008800                __DTOR_END__=.
+ *(.rodata)
+ .rodata        0x80008800      0x34d S2_Photocell_Proportional_Control_v1_7.o
+ .rodata        0x80008b4d      0xc54 library.o
+ *(.gcc_except_table)
+ *fill*         0x800097a1        0x1
+                0x800097a2                .=ALIGN(0x2)
+                0x800097a2                __INIT_SECTION__=.
+                0x800097a2        0x4 LONG 0x4e560000
+ *(.init)
+                0x800097a6        0x2 SHORT 0x4e5e
+                0x800097a8        0x2 SHORT 0x4e75
+                0x800097aa                __FINI_SECTION__=.
+                0x800097aa        0x4 LONG 0x4e560000
+ *(.fini)
+                0x800097ae        0x2 SHORT 0x4e5e
+                0x800097b0        0x2 SHORT 0x4e75
+ *(.lit)
+ *fill*         0x800097b2        0xe
+                0x800097c0                .=ALIGN(0x10)
+                0x800097c0                _etext=.
+                0x800097c0                etext=.
+
+.data           0x800097c0        0x0
+                0x800097c0                copy_start=.
+ *(.shdata)
+ *(.data)
+ *(.gnu.linkonce.d.*)
+                0x800097c0                .=ALIGN(0x10)
+                0x800097c0                _edata=.
+                0x800097c0                copy_end=.
+
+.got
+ *(.got.plt)
+ *(.got)
+
+EntryList       0x800097c0      0x110
+ *(EntryList)
+ EntryList      0x800097c0      0x110 S2_Photocell_Proportional_Control_v1_7.o
+                0x800097c0                S2_Photocell_Proportional_Control_v1_7_Entry
+                0x800098d0                .=ALIGN(0x4)
+
+FunctionList    0x800098d0        0x4
+ *(FunctionList)
+ FunctionList   0x800098d0        0x4 globals.o
+                0x800098d0                g_pFunctions
+                0x800098d4                .=ALIGN(0x4)
+
+.bss            0x800098d4        0x0
+                0x800098d4                .=ALIGN(0x4)
+                0x800098d4                __bss_start=.
+ *(.shbss)
+ *(.bss)
+ *(COMMON)
+                0x800098d8                _end=ALIGN(0x8)
+                0x800098d8                __end=_end
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+LOAD S2_Photocell_Proportional_Control_v1_7.o
+LOAD globals.o
+LOAD library.o
+OUTPUT(_S2_1526320_Salem_HS_GLP3_1_Library_04_22_2019.spl elf32-m68k)
+
+.comment        0x800098d4       0x72
+ .comment       0x800098d4       0x26 S2_Photocell_Proportional_Control_v1_7.o
+ .comment       0x800098fa       0x26 globals.o
+ .comment       0x80009920       0x26 library.o

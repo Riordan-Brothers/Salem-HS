@@ -1,0 +1,76 @@
+<Device Model="DIN-AP3">
+   <Network Type="Cresnet" Id="01">
+      <Device Model="C2N-CBD-P" DeviceId="25" Name="**do not use"/>
+      <Device Model="C2N-CBD-P" DeviceId="26" Name="Maint_F790 KP1    SN 13005358"/>
+      <Device Model="C2N-CBD-P" DeviceId="27" Name="Maint_F790 KP2    SN 13005283"/>
+      <Device Model="C2N-CBD-P" DeviceId="28" Name="Rec_F783 KP1    SN 13005312"/>
+      <Device Model="C2N-CBD-P" DeviceId="29" Name="Rec_F783 KP2    SN 13005338"/>
+      <Device Model="C2N-CBD-P" DeviceId="2A" Name="Treatment F743 SN 14084831 [C2]"/>
+      <Device Model="C2N-CBD-P" DeviceId="2B" Name="Treatment F743 SN 14082044 [C2]"/>
+      <Device Model="C2N-CBD-P" DeviceId="2C" Name="Reception F741A SN 14483789 [C2]"/>
+      <Device Model="C2N-CBD-P" DeviceId="2D" Name="IT Work F753/749 SN 14903703 [C2] "/>
+      <Device Model="C2N-CBD-P" DeviceId="2E" Name="IT Work F753/749 SN 14902360  [C2]"/>
+      <Device Model="C2N-CBD-P" DeviceId="2F" Name="Kitch    SN 13004228"/>
+      <Device Model="C2N-CBD-P" DeviceId="30" Name="IT Work F753/749 SN 14902298  [C2] "/>
+      <Device Model="C2N-CBD-P" DeviceId="32" Name="Maint_F790 KP3          exist? SN ?"/>
+      <Device Model="C2N-CBD-P" DeviceId="33" Name="Maint_F790 KP4          exist? SN ?"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="90" Name="Corr F791 occ01 SN 14756451"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="91" Name="Corr F791 occ02 SN 14956494"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="92" Name="Corr F791 occ03 SN ????"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="97" Name="**do not use"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="98" Name="Corr_F771/vestibule occ01    SN 14756581"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="99" Name="Corr_F771 occ02    SN 13336616"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="9A" Name="Corr_F771 occ03 *lol    SN 13337417"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="9B" Name="Corr_F771 occ04    SN 13336565"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="9C" Name="Corr_F771 occ05    SN 13336592"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="9D" Name="corr F740 SN ? occ01"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="9E" Name="corr F740 SN ? occ02"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="9F" Name="corr F740 SN ? occ03"/>
+      <Device Model="GLS-ODT-C-CN" DeviceId="A0" Name="corr F740 SN ? occ04"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="A4" Name="**do not use"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="A5" Name="ext wall packs    SN 14307407"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="A6" Name="corr_F791  SN 14803721"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="A7" Name="rec_F783    SN 14320618"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="A8" Name="lockers_F778    SN 14307369"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="A9" Name="kitch_office_F776    SN 14307391"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="AA" Name="Kitch_Dir_F773    SN 14307414"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="AB" Name="Corr_F771    SN 15852864"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="AC" Name="Staff_Women_F772       exist?"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="AD" Name="Staff_Men_F774       exist?"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="AE" Name="Exam F742 SN 14945957"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="AF" Name="Reception/Treatment F741A/F743 SN?"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="B0" Name="Quiet Room F745 SN 14945931"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="B1" Name="Corridor F740 SN 15852918"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="B2" Name="Conference F747 SN 14947245"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="B3" Name="Vestibule F740A SN 14803738 DELETED"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="B4" Name="IT Work F753 SN 14947202"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="B5" Name="IT Office F752 SN 14803711"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="B6" Name="IT Office F751 SN 14803345"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="B7" Name="Director Office F750 SN 14947234"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="B8" Name="Alternate Learning F841 SN?"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="B9" Name="Quiet Room F846 SN?"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="BA" Name="Life Skills F845 SN 15853829"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="BB" Name="Office F848 SN 14803574"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="BC" Name="Toilet F847A SN 14803682"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="BD" Name="Office F849 SN?"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="BE" Name="Conference F854 SN 1494736"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="BF" Name="Quiet Room F851 SN 1480359?"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="C0" Name="Office F850 SN 14946965"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="C1" Name="Nurse F746 SN?"/>
+      <Device Model="GLPP-1DIMFLV3CN-PM" DeviceId="C2" Name="Open Area F847"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="C3" Name="Corr F840"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="C4" Name="Corr F740 Display Cab 1"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="C5" Name="Corr F740 Display Cab 2"/>
+      <Device Model="GLPP-1DIMFLV2CN-PM" DeviceId="C6" Name="GLPP-1DIMFLV2CN-PM: ROTC F799 SN 1582909"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="C7" Name="GLPP-DIMFLVCN-PM: ROTC F799A SN 14947190"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="C8" Name="GLPP-DIMFLVCN-PM: Custodian Office B358 SN 14803699"/>
+      <Device Model="GLPP-DIMFLVCN-PM" DeviceId="C9" Name="GLPP-DIMFLVCN-PM:site lights SN 16030205"/>
+   </Network>
+   <Network Type="Ethernet" Id="02">
+      <Device Model="Core3 UI XPanel" DeviceId="03" Name="XPanel 2.0 Smart Graphics"/>
+      <Device Model="GLPAC-DIMFLV4" DeviceId="0A" Name="Cafeteria     GL1       *FLV4 OR FLV8?"/>
+      <Device Model="GLPAC-DIMFLV8" DeviceId="0B" Name="Cafeteria    GL2    *FLV4 or FLV8?"/>
+      <Device Model="GLPAC-DIMFLV8" DeviceId="0C" Name="Davis Gym    GL3"/>
+      <Device Model="GLPAC-DIMFLV4-PM" DeviceId="0D" Name="GL3-1A EXT"/>
+   </Network>
+</Device>
